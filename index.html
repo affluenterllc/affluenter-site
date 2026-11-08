@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Affluenter Vault — Password manager for Android</title>
+<meta name="description" content="A password manager for Android that keeps your passwords, passkeys and files encrypted on your phone. No account, no server.">
+<link rel="canonical" href="https://affluenter.com/">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Affluenter Vault — Password manager for Android">
+<meta property="og:description" content="A password manager for Android that keeps your passwords, passkeys and files encrypted on your phone. No account, no server.">
+<meta property="og:url" content="https://affluenter.com/">
+<meta property="og:image" content="https://affluenter.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/pagella-bold.otf" as="font" type="font/otf" crossorigin>
+<style>
+@font-face{font-family:"Pagella";src:url("/assets/pagella-bold.otf") format("opentype");font-weight:700;font-display:swap}
+:root{--gold:#D4BA71;--gold-d:#B8973F;--ink:#0E0E0E;--ink2:#171717;--line:#2a2a2a;--text:#ECE8DD;--muted:#A7A296;--paper:#F6F4EE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--ink)}
+a{color:var(--gold)}
+h1,h2,h3{font-family:"Pagella","TeX Gyre Pagella","Palatino Linotype",Palatino,Georgia,serif;font-weight:700;color:#fff;line-height:1.2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:760px}
+/* header */
+.top{position:sticky;top:0;z-index:5;background:rgba(14,14,14,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center}
+.brand img{height:18px;width:auto;display:block}
+.nav{display:flex;gap:20px;font-size:15px}
+.nav a{color:var(--text);text-decoration:none;opacity:.85}
+.nav a:hover,.nav a[aria-current]{color:var(--gold);opacity:1}
+/* hero */
+.hero{padding:72px 0 64px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#2a2414 0%,var(--ink) 62%)}
+.hero .mark{width:112px;height:auto;margin:0 auto 26px;display:block}
+.hero h1{font-size:clamp(36px,6vw,58px);margin:0 0 14px}
+.hero p.lead{font-size:clamp(18px,2.4vw,21px);color:var(--text);max-width:640px;margin:0 auto 30px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid var(--gold)}
+.btn.solid{background:var(--gold);color:var(--ink)}
+.btn.ghost{color:var(--gold)}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,38px);margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 34px;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:20px;margin:0 0 6px;color:var(--gold)}
+.card p{margin:0;color:var(--text);font-size:16px}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.points b{display:block;color:#fff;font-size:18px;margin-bottom:4px}
+.points span{color:var(--muted);font-size:16px}
+table.plans{width:100%;border-collapse:collapse;font-size:16px}
+table.plans th,table.plans td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+table.plans th{color:var(--gold);font-weight:600}
+table.plans td.c{text-align:center;width:90px}
+.yes{color:var(--gold);font-weight:700}
+.no{color:#666}
+/* text pages */
+.page{padding:48px 0 70px}
+.page h1{font-size:clamp(30px,5vw,42px);margin:0 0 6px}
+.page h2{font-size:24px;margin:38px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+.page h3{font-size:19px;margin:24px 0 6px;color:var(--gold)}
+.page .meta{color:var(--muted);margin:0 0 22px}
+.page ul{padding-left:22px}
+.page li{margin:6px 0}
+/* footer */
+footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--gold)}
+@media(max-width:640px){.nav{gap:14px;font-size:14px}.nav .opt{display:none}.brand img{height:14px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/" aria-label="Affluenter home"><img src="/assets/wordmark-gold.png" alt="AFFLUENTER" width="900" height="96"></a>
+<nav class="nav"><a href="/" aria-current="page">Vault</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/" class="opt">Terms</a></nav>
+</div></header>
+<main>
+<div class="hero"><div class="wrap">
+<img class="mark" src="/assets/shield-gold.png" alt="" width="204" height="243">
+<h1>Affluenter Vault</h1>
+<p class="lead">A password manager for Android that keeps everything encrypted on your phone. No account, no Affluenter server, and nothing we can see.</p>
+<div class="btns">
+<a class="btn solid" href="#features">See what it does</a>
+<a class="btn ghost" href="/support/">Get help</a>
+</div>
+<p class="note">Coming soon to Google Play &middot; Android 10 and later</p>
+</div></div>
+
+<section id="features"><div class="wrap">
+<h2>Everything in one locked place</h2>
+<p class="sub">Logins, cards, notes, passkeys, 2FA codes and private files, filled in where you need them.</p>
+<div class="grid">
+<div class="card"><h3>Autofill everywhere</h3><p>Fills usernames and passwords in apps and browsers, and in Android's sign-in sheet on Android 14 and later.</p></div>
+<div class="card"><h3>Passkeys</h3><p>Create and use passkeys on Android 14 and later, kept in your encrypted vault and confirmed with your fingerprint or password every time.</p></div>
+<div class="card"><h3>Quick save</h3><p>Tap Save in Android's prompt and the login goes straight into your vault, with Undo if you change your mind.</p></div>
+<div class="card"><h3>Fingerprint and PIN unlock</h3><p>Open the vault in a second. The key stays in your phone's secure hardware.</p></div>
+<div class="card"><h3>Security check</h3><p>Finds weak, reused and breached passwords, flags sites that offer 2FA, and merges duplicates without losing anything.</p></div>
+<div class="card"><h3>Secure Files</h3><p>Scans, photos and documents, each encrypted separately with your vault key.</p></div>
+<div class="card"><h3>Backups and Drive sync</h3><p>Encrypted backups wherever you choose, and sync between phones through your own Google Drive (Pro).</p></div>
+<div class="card"><h3>Travel Mode</h3><p>Move chosen items and files off the phone before a trip and bring them back later (Pro).</p></div>
+<div class="card"><h3>Emergency Kit</h3><p>A printable kit and an emergency backup so a trusted person can reach your vault if they ever need to.</p></div>
+</div>
+</div></section>
+
+<section id="security"><div class="wrap">
+<h2>Private by design</h2>
+<p class="sub">Your vault is encrypted on your phone. Affluenter never receives it, so there is nothing for us to lose, sell or hand over.</p>
+<div class="points">
+<div><b>AES-256-GCM</b><span>Every item and file is encrypted with a key derived from your master password (PBKDF2-SHA256).</span></div>
+<div><b>No account, no server</b><span>Nothing to sign up for. Your master password never leaves your phone, and we can't reset it.</span></div>
+<div><b>No ads or trackers</b><span>No analytics, advertising IDs, location or contacts. Optional online checks send only what the <a href="/privacy/">privacy policy</a> lists.</span></div>
+<div><b>Breach checks done right</b><span>Only the first 5 characters of a password's SHA-1 hash are sent to Have I Been Pwned, never the password.</span></div>
+</div>
+</div></section>
+
+<section id="pro"><div class="wrap narrow">
+<h2>Free, with an optional Pro unlock</h2>
+<p class="sub">Core security is always free. Pro is a one-time purchase through Google Play, with no subscription.</p>
+<table class="plans">
+<thead><tr><th>Feature</th><th class="c">Free</th><th class="c">Pro</th></tr></thead>
+<tbody>
+<tr><td>Login autofill, Quick save and passkeys</td><td class="c yes">&#10003;</td><td class="c yes">&#10003;</td></tr>
+<tr><td>Fingerprint and PIN unlock</td><td class="c yes">&#10003;</td><td class="c yes">&#10003;</td></tr>
+<tr><td>Security check, breach alerts, duplicate merging</td><td class="c yes">&#10003;</td><td class="c yes">&#10003;</td></tr>
+<tr><td>Encrypted backups</td><td class="c yes">&#10003;</td><td class="c yes">&#10003;</td></tr>
+<tr><td>Secure Files</td><td class="c">10</td><td class="c yes">Unlimited</td></tr>
+<tr><td>Card scanning, card and address autofill</td><td class="c no">&mdash;</td><td class="c yes">&#10003;</td></tr>
+<tr><td>Google Drive sync between phones</td><td class="c no">&mdash;</td><td class="c yes">&#10003;</td></tr>
+<tr><td>Secure sharing and email masking</td><td class="c no">&mdash;</td><td class="c yes">&#10003;</td></tr>
+<tr><td>Travel Mode and emergency backup</td><td class="c no">&mdash;</td><td class="c yes">&#10003;</td></tr>
+</tbody>
+</table>
+</div></section>
+
+</main>
+<footer><div class="wrap">
+<div>&copy; Affluenter LLC, Chicago, Illinois &middot; <a href="mailto:info@affluenter.com">info@affluenter.com</a><br>AFFLUENTER is a registered trademark of Affluenter LLC.</div>
+<nav><a href="/">Affluenter Vault</a><a href="/support/">Support</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of use</a><a href="/powerbanks/">AFFLUENTER&reg; power banks</a></nav>
+</div></footer>
+</body>
+</html>
