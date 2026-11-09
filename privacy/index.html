@@ -87,10 +87,10 @@ footer a:hover{color:var(--gold)}
 <main>
 <div class="page"><div class="wrap narrow">
 <h1>Affluenter Vault — Privacy Policy</h1>
-<p class="meta">Effective November 7, 2026</p>
+<p class="meta">Effective November 9, 2026</p>
 <h2>Summary</h2>
 <p>Affluenter Vault keeps your passwords and private information encrypted on your phone, and Affluenter LLC never receives any of it. There is no account to create and no Affluenter server: your vault is locked with a master password that only you know, and we cannot see, recover or reset it.</p>
-<p>Your information leaves the phone only when you choose a feature that sends it somewhere, such as a backup you save, Google Drive sync, or a secure share. A few optional online features (breach checks, the 2FA site list, passkey checks and email masking) send the small amounts of data described below.</p>
+<p>Your information leaves the phone only when you choose a feature that sends it somewhere, such as a backup you save, Google Drive sync, or a secure share. A few optional online features (breach checks, the 2FA site list, change-password checks, passkey checks and email masking) send the small amounts of data described below.</p>
 <p>This policy applies to the Affluenter Vault app for Android, published by Affluenter LLC, Chicago, Illinois ("we", "us").</p>
 <h2>What the app stores on your phone</h2>
 <p>Everything you put in the app is stored in the app's private storage on your phone, encrypted with AES-256-GCM using a key derived from your master password.</p>
@@ -99,7 +99,7 @@ footer a:hover{color:var(--gold)}
 <li>Secure Files (scans, photos, documents): each file encrypted separately with your vault key.</li>
 <li>Fingerprint and PIN unlock data: your vault key, wrapped by a key held in the phone's secure hardware (Android Keystore).</li>
 <li>Settings, sites you chose never to save, sort order, last-used times: not encrypted; contains no passwords or item contents.</li>
-<li>Expiry reminder dates and breach-alert markers: dates and random item IDs only, no names or numbers.</li>
+<li>Expiry reminder dates, breach-alert markers and old-password reminder markers: dates, counts and random item IDs only, no names or numbers.</li>
 </ul>
 <p>We do not collect analytics, advertising IDs, location or contacts, and the app contains no ads or third-party trackers.</p>
 <p>Fingerprints. Fingerprint unlock uses Android's built-in fingerprint check. Your fingerprint is read and matched by your phone's operating system and secure hardware; the app only learns whether the check succeeded. Affluenter Vault never receives, stores or sends your fingerprint or any other biometric data.</p>
@@ -113,6 +113,8 @@ footer a:hover{color:var(--gold)}
 <li>Emergency backup and Emergency Kit: an encrypted backup with its own passphrase, and a printable kit, where you save or print them.</li>
 <li>Travel Mode (Pro): the items and files you move off the phone, encrypted, to the place you pick for the travel file.</li>
 <li>Save a copy (Secure Files): an unencrypted copy of that file, to the place you pick.</li>
+<li>Moving to another password manager: the logins, passkeys and 2FA codes you choose, to the password manager app you pick on your phone, through Android's credential transfer, after you confirm with your fingerprint, screen lock or master password. Bringing items in works the same way in reverse.</li>
+<li>2FA codes to an authenticator app: the setup keys of the 2FA codes you choose, to the authenticator app you pick (such as Google Authenticator), or shown on your screen as QR codes to scan, after you confirm with your fingerprint, screen lock or master password.</li>
 <li>Crash report: technical error details, app version, Android version and phone model (never vault data), only to whoever you copy and send it to.</li>
 </ul>
 <p>Encrypted files can only be opened with your master password, your vault key, or the passcode you set. Google Drive and other storage services handle those files under their own privacy policies.</p>
@@ -120,6 +122,7 @@ footer a:hover{color:var(--gold)}
 <ul>
 <li>Breach check and weekly breach alerts — when you run the check in Security check, and about once a week after you unlock unless you turn alerts off. Sends the first 5 characters of the SHA-1 hash of each password, never the password itself, to Have I Been Pwned (api.pwnedpasswords.com).</li>
 <li>2FA site list — when you open Security check, at most once every 30 days. Sends nothing about you or your vault; the app only downloads the public list from 2fa.directory (api.2fa.directory).</li>
+<li>Change-password check — when you tap Change password or fix a password step by step. Asks that website (and only that website) whether it has a standard change-password page, at https://&lt;site&gt;/.well-known/change-password, before opening it. Sends nothing from your vault.</li>
 <li>Passkeys — when an app or browser asks to create or use a passkey. Sends the website's domain, the asking app's package name and its signing certificate fingerprint, and downloads Google's list of trusted browsers, to Google (digitalassetlinks.googleapis.com, gstatic.com).</li>
 <li>Email masking (Pro) — when you create a masked email address. Sends your access token for the service and the site the address is for, to the service you connected: DuckDuckGo, SimpleLogin, addy.io or Firefox Relay.</li>
 <li>Links you tap — when you tap a website, email address or phone number in an item, whatever opening that site, email app or dialer involves.</li>
@@ -133,22 +136,23 @@ footer a:hover{color:var(--gold)}
 <li>Quick save: when you tap Save in Android's prompt, the login is saved to your encrypted vault right away, and you can undo it. You can turn Quick save off in Settings.</li>
 <li>Passkeys: created on your phone and kept in your encrypted vault. The checks that confirm an app or browser may use a website's passkeys are listed above.</li>
 </ul>
-<p>The "Choose app" list shows the apps on your home screen so you can link an item to one. That list is read on your phone and is not stored or sent.</p>
-<h2>Google play services and permissions</h2>
+<p>The "Choose app" list shows the apps on your home screen so you can link an item to one, and the app checks which authenticator apps are installed so it can offer to send 2FA codes to one. These lists are read on your phone and are not stored or sent.</p>
+<p>Home-screen widgets (2FA codes and Favorites) show no item names, passwords or codes; tapping them opens the app, which asks you to unlock first.</p>
+<h2>Google Play services and permissions</h2>
 <p>Scanners and text reading. Card scanning, document scanning and QR code scanning use Google Play services and ML Kit. The images and text are processed on your phone and are not sent to Google. Under Google's ML Kit terms, these components may download updates and models from Google and send Google metrics about how the scanning features perform and are used. Google handles that data under the Google Privacy Policy (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
 <p>Purchases. Pro is bought through Google Play. Google handles your payment; the app only receives confirmation of the purchase so it can unlock Pro. We never see your card or billing details.</p>
 <p>Permissions the app asks for:</p>
 <ul>
 <li>Internet — the optional online features and sync listed above.</li>
 <li>Fingerprint (biometric) — fingerprint unlock and confirming passkeys, if you turn them on.</li>
-<li>Notifications — expiry reminders and breach alerts.</li>
+<li>Notifications — expiry reminders, breach alerts and old-password reminders.</li>
 <li>Run at startup — keeps expiry reminders scheduled after the phone restarts.</li>
 </ul>
 <p>The app does not ask for camera, location, contacts, microphone or storage permissions. Photos are taken with your camera app, and files are chosen with Android's file picker, which gives the app only the files you pick.</p>
 <h2>Your choices and rights</h2>
 <p>We don't sell or share your information. We don't receive your vault data, so we have nothing to sell, share for advertising, or hand over. If a government or anyone else asks us for your passwords, we can't provide them.</p>
 <p>Deleting your data. Settings → Delete vault erases the vault, Secure Files and app settings from your phone; uninstalling the app does the same. Backups, sync files, travel files and shared files you saved elsewhere stay where you put them until you delete them there. To stop syncing, turn off Sync in Settings and delete the sync file from your Google Drive.</p>
-<p>Security. Your vault is encrypted with AES-256-GCM using a key derived from your master password with PBKDF2-SHA256. No system is perfectly secure, so use a strong master password and keep your phone's lock screen on. If you forget your master password, we cannot recover your data.</p>
+<p>Security. Your vault is encrypted with AES-256-GCM using a key derived from your master password with Argon2id (RFC 9106), a deliberately slow, memory-hard method that makes guessing your master password very expensive. A PIN, if you set one, is protected the same way, and after 5 wrong PINs PIN unlock turns off until you enter your master password. Vaults created before version 1.1.31 used PBKDF2-SHA256 and switch to Argon2id the next time you enter your master password. No system is perfectly secure, so use a strong master password and keep your phone's lock screen on. If you forget your master password, we cannot recover your data.</p>
 <p>Children. The app is not directed at children under 13, and we don't knowingly collect information from anyone.</p>
 <p>Your rights. Depending on where you live, you may have rights to access, correct or delete personal information a company holds about you. Because we hold none of your vault data, these requests are handled on your phone with the steps above. You can contact us with any questions.</p>
 <h2>Changes to this policy</h2>

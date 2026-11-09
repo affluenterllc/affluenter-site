@@ -104,7 +104,7 @@ footer a:hover{color:var(--gold)}
 <div class="card"><h3>Passkeys</h3><p>Create and use passkeys on Android 14 and later, kept in your encrypted vault and confirmed with your fingerprint or password every time.</p></div>
 <div class="card"><h3>Quick save</h3><p>Tap Save in Android's prompt and the login goes straight into your vault, with Undo if you change your mind.</p></div>
 <div class="card"><h3>Fingerprint and PIN unlock</h3><p>Open the vault in a second. The key stays in your phone's secure hardware.</p></div>
-<div class="card"><h3>Security check</h3><p>Finds weak, reused and breached passwords, flags sites that offer 2FA, and merges duplicates without losing anything.</p></div>
+<div class="card"><h3>Security check</h3><p>Finds weak, reused and breached passwords, flags sites that offer 2FA, and merges duplicates without losing anything. Vault tune-up walks you through fixing it all, step by step.</p></div>
 <div class="card"><h3>Secure Files</h3><p>Scans, photos and documents, each encrypted separately with your vault key.</p></div>
 <div class="card"><h3>Backups and Drive sync</h3><p>Encrypted backups wherever you choose, and sync between phones through your own Google Drive (Pro).</p></div>
 <div class="card"><h3>Travel Mode</h3><p>Move chosen items and files off the phone before a trip and bring them back later (Pro).</p></div>
@@ -116,7 +116,7 @@ footer a:hover{color:var(--gold)}
 <h2>Private by design</h2>
 <p class="sub">Your vault is encrypted on your phone. Affluenter never receives it, so there is nothing for us to lose, sell or hand over.</p>
 <div class="points">
-<div><b>AES-256-GCM</b><span>Every item and file is encrypted with a key derived from your master password (PBKDF2-SHA256).</span></div>
+<div><b>AES-256-GCM</b><span>Every item and file is encrypted with a key derived from your master password using Argon2id, a slow, memory-hard method built to resist guessing.</span></div>
 <div><b>No account, no server</b><span>Nothing to sign up for. Your master password never leaves your phone, and we can't reset it.</span></div>
 <div><b>No ads or trackers</b><span>No analytics, advertising IDs, location or contacts. Optional online checks send only what the <a href="/privacy/">privacy policy</a> lists.</span></div>
 <div><b>Breach checks done right</b><span>Only the first 5 characters of a password's SHA-1 hash are sent to Have I Been Pwned, never the password.</span></div>
