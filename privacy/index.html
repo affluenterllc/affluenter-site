@@ -120,8 +120,8 @@ footer a:hover{color:var(--gold)}
 <p>Encrypted files can only be opened with your master password, your vault key, or the passcode you set. Google Drive and other storage services handle those files under their own privacy policies.</p>
 <p>Optional online features:</p>
 <ul>
-<li>Breach check and weekly breach alerts — when you run the check in Security check, and about once a week after you unlock unless you turn alerts off. Sends the first 5 characters of the SHA-1 hash of each password, never the password itself, to Have I Been Pwned (api.pwnedpasswords.com).</li>
-<li>2FA site list — when you open Security check, at most once every 30 days. Sends nothing about you or your vault; the app only downloads the public list from 2fa.directory (api.2fa.directory).</li>
+<li>Breach check and weekly breach alerts — when you run the check in Security, and about once a week after you unlock unless you turn alerts off. Sends the first 5 characters of the SHA-1 hash of each password, never the password itself, to Have I Been Pwned (api.pwnedpasswords.com).</li>
+<li>2FA site list — when you open Security, at most once every 30 days. Sends nothing about you or your vault; the app only downloads the public list from 2fa.directory (api.2fa.directory).</li>
 <li>Change-password check — when you tap Change password or fix a password step by step. Asks that website (and only that website) whether it has a standard change-password page, at https://&lt;site&gt;/.well-known/change-password, before opening it. Sends nothing from your vault.</li>
 <li>Passkeys — when an app or browser asks to create or use a passkey. Sends the website's domain, the asking app's package name and its signing certificate fingerprint, and downloads Google's list of trusted browsers, to Google (digitalassetlinks.googleapis.com, gstatic.com).</li>
 <li>Email masking (Pro) — when you create a masked email address. Sends your access token for the service and the site the address is for, to the service you connected: DuckDuckGo, SimpleLogin, addy.io or Firefox Relay.</li>
