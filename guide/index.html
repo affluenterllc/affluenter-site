@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to use Affluenter Vault</title>
+<meta name="description" content="The basics of Affluenter Vault for Android: where things are, press-and-hold shortcuts, copying, autofill, 2FA codes, Security and backups.">
+<link rel="canonical" href="https://affluenter.com/guide/">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to use Affluenter Vault">
+<meta property="og:description" content="The basics of Affluenter Vault for Android: where things are, press-and-hold shortcuts, copying, autofill, 2FA codes, Security and backups.">
+<meta property="og:url" content="https://affluenter.com/guide/">
+<meta property="og:image" content="https://affluenter.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/pagella-bold.otf" as="font" type="font/otf" crossorigin>
+<style>
+@font-face{font-family:"Pagella";src:url("/assets/pagella-bold.otf") format("opentype");font-weight:700;font-display:swap}
+:root{--gold:#D4BA71;--gold-d:#B8973F;--ink:#0E0E0E;--ink2:#171717;--line:#2a2a2a;--text:#ECE8DD;--muted:#A7A296;--paper:#F6F4EE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--ink)}
+a{color:var(--gold)}
+h1,h2,h3{font-family:"Pagella","TeX Gyre Pagella","Palatino Linotype",Palatino,Georgia,serif;font-weight:700;color:#fff;line-height:1.2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:760px}
+/* header */
+.top{position:sticky;top:0;z-index:5;background:rgba(14,14,14,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center}
+.brand img{height:18px;width:auto;display:block}
+.nav{display:flex;gap:20px;font-size:15px}
+.nav a{color:var(--text);text-decoration:none;opacity:.85}
+.nav a:hover,.nav a[aria-current]{color:var(--gold);opacity:1}
+/* hero */
+.hero{padding:72px 0 64px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#2a2414 0%,var(--ink) 62%)}
+.hero .mark{width:112px;height:auto;margin:0 auto 26px;display:block}
+.hero h1{font-size:clamp(36px,6vw,58px);margin:0 0 14px}
+.hero p.lead{font-size:clamp(18px,2.4vw,21px);color:var(--text);max-width:640px;margin:0 auto 30px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid var(--gold)}
+.btn.solid{background:var(--gold);color:var(--ink)}
+.btn.ghost{color:var(--gold)}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,38px);margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 34px;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:20px;margin:0 0 6px;color:var(--gold)}
+.card p{margin:0;color:var(--text);font-size:16px}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.points b{display:block;color:#fff;font-size:18px;margin-bottom:4px}
+.points span{color:var(--muted);font-size:16px}
+table.plans{width:100%;border-collapse:collapse;font-size:16px}
+table.plans th,table.plans td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+table.plans th{color:var(--gold);font-weight:600}
+table.plans td.c{text-align:center;width:90px}
+.yes{color:var(--gold);font-weight:700}
+.no{color:#666}
+/* text pages */
+.page{padding:48px 0 70px}
+.page h1{font-size:clamp(30px,5vw,42px);margin:0 0 6px}
+.page h2{font-size:24px;margin:38px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+.page h3{font-size:19px;margin:24px 0 6px;color:var(--gold)}
+.page .meta{color:var(--muted);margin:0 0 22px}
+.page ul{padding-left:22px}
+.page li{margin:6px 0}
+/* footer */
+footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--gold)}
+@media(max-width:640px){.nav{gap:14px;font-size:14px}.nav .opt{display:none}.brand img{height:14px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/" aria-label="Affluenter home"><img src="/assets/wordmark-gold.png" alt="AFFLUENTER" width="900" height="96"></a>
+<nav class="nav"><a href="/">Vault</a><a href="/guide/" aria-current="page">Guide</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/" class="opt">Terms</a></nav>
+</div></header>
+<main>
+<div class="page"><div class="wrap narrow">
+<h1>How to use Affluenter Vault</h1>
+<p class="meta">The basics, in five minutes. The same tips are in the app: More &rarr; Help &amp; tips.</p>
+
+<h2>Where things are</h2>
+<ul>
+<li><b>The bar at the bottom</b> has four tabs: <b>Vault</b> (your items), <b>2FA codes</b>, <b>Security</b> and <b>More</b>.</li>
+<li><b>More</b> holds Settings, Help &amp; tips, the password generator, Find duplicates, Recently deleted, Secure Files, Groups, Travel Mode, email masking, Import and 2FA import/export.</li>
+<li><b>&#xFF0B;</b> at the bottom right of the vault adds an item. The two buttons at the top are <b>Sort</b> (A&ndash;Z, Recently used, Recently changed) and <b>Lock</b>.</li>
+<li><b>Search</b> looks through titles, notes, groups, tags and every field that isn&rsquo;t secret.</li>
+<li><b>The chips under the search box</b> filter the list: All, &#9733; Favorites, &#128193; Files, each group and your #tags.</li>
+</ul>
+
+<h2>Press and hold</h2>
+<p>A long-press (touch and hold for about half a second) opens shortcuts that save a step:</p>
+<ul>
+<li><b>An item in the list:</b> copy its username, password or 2FA code, or add it to Favorites, without opening it.</li>
+<li><b>A group chip:</b> edit that group: its name, icon and the fields new items start with.</li>
+<li><b>A code on the 2FA codes tab:</b> open its item. A plain tap copies the code.</li>
+<li><b>&#10697; next to an address:</b> copy the address on one line, for web forms with a single address box.</li>
+<li><b>A folder in Secure Files:</b> rename or delete it. On a file, it opens the same menu as the file&rsquo;s &#8942; button.</li>
+<li><b>The Affluenter Vault icon on your home screen:</b> Search vault, Add item, 2FA codes, Favorites and Generate password (some phones show only four).</li>
+<li><b>An empty spot on your home screen</b> &rarr; Widgets &rarr; Affluenter Vault: a Favorites widget and a 2FA codes widget. They unlock the vault first and never show names, passwords or codes on the home screen.</li>
+</ul>
+
+<h2>Buttons on an item</h2>
+<ul>
+<li><b>&#10697;</b> copies a value. Passwords and codes are marked sensitive and cleared from the clipboard after a while. Some keyboards keep their own clipboard history; you can clear it or turn it off in the keyboard&rsquo;s settings.</li>
+<li><b>&#128065;</b> shows or hides a password. Card numbers show only their last 4 digits until you tap it.</li>
+<li><b>&#8599;</b> opens the website or app, <b>&#9993;</b> writes an email, <b>&#128222;</b> calls (your dialer opens first), <b>&#128205;</b> opens Maps. Websites, emails and phone numbers inside notes are tappable too.</li>
+<li><b>Edit</b> lets you change any field, add fields, and move them with <b>&#8593; &#8595;</b>. Old passwords are kept under Previous values.</li>
+</ul>
+
+<h2>Filling passwords into apps and websites</h2>
+<p>Turn on autofill once (the app offers to do it, or see <a href="/support/">Support</a>). Then tap a sign-in box: your matching logins appear above the keyboard or in a list. Tap one, confirm with your fingerprint or PIN, and it&rsquo;s filled. When you sign in somewhere new, tap <b>Save</b> when Android asks and the login is stored. On a sign-up form, &ldquo;&#128273; Create a strong password&rdquo; makes one, saves it first and fills it.</p>
+
+<h2>2FA codes</h2>
+<p>Items can hold a 2-step verification (2FA) code: scan the site&rsquo;s QR code or paste its setup key when editing the item. The <b>2FA codes</b> tab shows every code with its countdown: tap to copy. Codes also fill the code box on verification screens. More &rarr; Import 2FA codes brings codes over from Google Authenticator.</p>
+
+<h2>Security</h2>
+<p>The <b>Security</b> tab walks you through your vault one step at a time: duplicates, weak, reused and old passwords, missing 2FA and more. Nothing changes until you tap a button, and most steps have Undo. &ldquo;Full security report&rdquo; shows everything on one page, and breach alerts check your passwords against known leaks without ever sending them.</p>
+
+<h2>Backups</h2>
+<p>Your vault lives only on your phone, so keep a backup: More &rarr; Settings &rarr; Backup, sync &amp; import &rarr; &ldquo;Save an encrypted backup now&rdquo;, saved somewhere off the phone such as Google Drive. You can also turn on Daily copies. Before every restore or import the app keeps a safety copy, and &ldquo;Undo last restore&rdquo; puts everything back.</p>
+
+<h2>Still stuck?</h2>
+<p>Search More &rarr; Help &amp; tips in the app, read the <a href="/support/">common questions</a>, or email <a href="mailto:info@affluenter.com">info@affluenter.com</a>. Never send your master password; we will never ask for it.</p>
+</div></div>
+
+</main>
+<footer><div class="wrap">
+<div>&copy; Affluenter LLC, Chicago, Illinois &middot; <a href="mailto:info@affluenter.com">info@affluenter.com</a><br>AFFLUENTER is a registered trademark of Affluenter LLC.</div>
+<nav><a href="/">Affluenter Vault</a><a href="/support/">Support</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of use</a><a href="/powerbanks/">AFFLUENTER&reg; power banks</a></nav>
+</div></footer>
+</body>
+</html>
