@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How do I…? — Affluenter Vault</title>
+<meta name="description" content="Short step-by-step answers for Affluenter Vault: autofill, saving logins, 2FA codes, importing, backups, new phones and more.">
+<link rel="canonical" href="https://affluenter.com/howto/">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How do I…? — Affluenter Vault">
+<meta property="og:description" content="Short step-by-step answers for Affluenter Vault: autofill, saving logins, 2FA codes, importing, backups, new phones and more.">
+<meta property="og:url" content="https://affluenter.com/howto/">
+<meta property="og:image" content="https://affluenter.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/pagella-bold.otf" as="font" type="font/otf" crossorigin>
+<style>
+@font-face{font-family:"Pagella";src:url("/assets/pagella-bold.otf") format("opentype");font-weight:700;font-display:swap}
+:root{--gold:#D4BA71;--gold-d:#B8973F;--ink:#0E0E0E;--ink2:#171717;--line:#2a2a2a;--text:#ECE8DD;--muted:#A7A296;--paper:#F6F4EE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--ink)}
+a{color:var(--gold)}
+h1,h2,h3{font-family:"Pagella","TeX Gyre Pagella","Palatino Linotype",Palatino,Georgia,serif;font-weight:700;color:#fff;line-height:1.2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:760px}
+/* header */
+.top{position:sticky;top:0;z-index:5;background:rgba(14,14,14,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center}
+.brand img{height:18px;width:auto;display:block}
+.nav{display:flex;gap:20px;font-size:15px}
+.nav a{color:var(--text);text-decoration:none;opacity:.85}
+.nav a:hover,.nav a[aria-current]{color:var(--gold);opacity:1}
+/* hero */
+.hero{padding:72px 0 64px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#2a2414 0%,var(--ink) 62%)}
+.hero .mark{width:112px;height:auto;margin:0 auto 26px;display:block}
+.hero h1{font-size:clamp(36px,6vw,58px);margin:0 0 14px}
+.hero p.lead{font-size:clamp(18px,2.4vw,21px);color:var(--text);max-width:640px;margin:0 auto 30px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid var(--gold)}
+.btn.solid{background:var(--gold);color:var(--ink)}
+.btn.ghost{color:var(--gold)}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,38px);margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 34px;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:20px;margin:0 0 6px;color:var(--gold)}
+.card p{margin:0;color:var(--text);font-size:16px}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.points b{display:block;color:#fff;font-size:18px;margin-bottom:4px}
+.points span{color:var(--muted);font-size:16px}
+table.plans{width:100%;border-collapse:collapse;font-size:16px}
+table.plans th,table.plans td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+table.plans th{color:var(--gold);font-weight:600}
+table.plans td.c{text-align:center;width:90px}
+.yes{color:var(--gold);font-weight:700}
+.no{color:#666}
+/* text pages */
+.page{padding:48px 0 70px}
+.page h1{font-size:clamp(30px,5vw,42px);margin:0 0 6px}
+.page h2{font-size:24px;margin:38px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+.page h3{font-size:19px;margin:24px 0 6px;color:var(--gold)}
+.page .meta{color:var(--muted);margin:0 0 22px}
+.page ul{padding-left:22px}
+.page li{margin:6px 0}
+/* footer */
+footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--gold)}
+@media(max-width:640px){.nav{gap:14px;font-size:14px}.nav .opt{display:none}.brand img{height:14px}}
+.search{width:100%;padding:14px 18px;border-radius:999px;border:1px solid var(--line);background:var(--ink2);color:var(--text);font-size:17px;margin:6px 0 10px}
+.search:focus{outline:none;border-color:var(--gold)}
+.howto{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:6px 22px 14px;margin:14px 0;scroll-margin-top:80px}
+.howto h3 a{color:var(--gold);text-decoration:none}
+.howto:target{border-color:var(--gold)}
+.howto ol{padding-left:22px;margin:6px 0}
+.howto img{width:100%;max-width:320px;border-radius:12px;border:1px solid var(--line);display:block;margin:10px 0}
+.tip{color:var(--muted);font-size:15px;margin:8px 0 0}
+#none{display:none;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/" aria-label="Affluenter home"><img src="/assets/wordmark-gold.png" alt="AFFLUENTER" width="900" height="96"></a>
+<nav class="nav"><a href="/">Vault</a><a href="/guide/">Guide</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/" class="opt">Terms</a></nav>
+</div></header>
+<main>
+<div class="page"><div class="wrap narrow">
+<h1>How do I…?</h1>
+<p class="meta">Short answers for Affluenter Vault on Android. New to the app? Start with <a href="/guide/">the guide</a>.</p>
+<input class="search" id="q" type="search" placeholder="Search: autofill, backup, 2FA, copy…" aria-label="Search how-tos" autocomplete="off">
+<p id="none">Nothing matches. Try another word, see <a href="/support/">Support</a> or email <a href="mailto:info@affluenter.com">info@affluenter.com</a>.</p>
+<article class="howto" id="basics" data-k="copy clipboard long press hold quick username code favorite">
+<h3><a href="#basics">Copy a password without opening the item</a></h3>
+<!-- screenshot: /assets/howto/basics.png -->
+<ol><li>On the Vault tab, find the item (search or scroll).</li><li>Press and hold the item.</li><li>Tap Copy username, Copy Password or Copy 2FA code, then paste it where you need it.</li></ol>
+<p class="tip">Passwords and codes are cleared from the clipboard after 30 seconds (you can change this in Settings).</p>
+</article>
+<article class="howto" id="autofill" data-k="autofill fill in passwords automatically set up password manager default service">
+<h3><a href="#autofill">Turn on autofill</a></h3>
+<!-- screenshot: /assets/howto/autofill.png -->
+<ol><li>After you unlock, the app asks “Make Affluenter Vault your password manager?” — tap Yes.</li><li>Confirm Affluenter Vault on your phone’s screen.</li><li>Tap “Open Chrome setting” and choose “Autofill using another service”, then restart Chrome.</li><li>Check it in More → Settings → Autofill: both should show as set.</li></ol>
+<p class="tip">Android always asks you to confirm; no app can switch this by itself. Chrome needs Android 14 or later.</p>
+</article>
+<article class="howto" id="trouble" data-k="not working no suggestions doesn&#x27;t fill missing autofill problem">
+<h3><a href="#trouble">Autofill isn’t showing up</a></h3>
+<!-- screenshot: /assets/howto/trouble.png -->
+<ol><li>Check More → Settings → Autofill shows Affluenter Vault as the service (and Chrome set to “another service”).</li><li>Tap the username or password box again; some apps only ask when a box is tapped.</li><li>Look just above the keyboard: some keyboards show suggestions there as chips.</li><li>If you see 🔒, tap it and unlock.</li><li>Still nothing? In Android Settings set the autofill service to “None”, then back to Affluenter Vault.</li></ol>
+<p class="tip">Some banking apps block autofill. Hold the item in the vault and copy the password instead.</p>
+</article>
+<article class="howto" id="save" data-k="save add login password quick save new account sign in">
+<h3><a href="#save">Save a new login</a></h3>
+<!-- screenshot: /assets/howto/save.png -->
+<ol><li>With autofill on, sign in to the app or website as usual.</li><li>When Android asks “Save to Affluenter Vault?”, tap Save.</li><li>A short message confirms it, with Undo and Edit.</li></ol>
+<p class="tip">If the login already exists, its password is updated and the old one is kept in Previous values.</p>
+</article>
+<article class="howto" id="strong" data-k="generate new password sign up register strong random create account">
+<h3><a href="#strong">Create a strong password when signing up</a></h3>
+<!-- screenshot: /assets/howto/strong.png -->
+<ol><li>On the sign-up form, tap the password box.</li><li>Tap “🔑 Create a strong password” in the suggestions.</li><li>The password is saved in the vault first, then filled in. Finish signing up.</li></ol>
+<p class="tip">On a change-password form, the new password waits until you confirm the site accepted it.</p>
+</article>
+<article class="howto" id="add" data-k="add item new entry field custom note card login">
+<h3><a href="#add">Add an item or a field</a></h3>
+<!-- screenshot: /assets/howto/add.png -->
+<ol><li>On the Vault tab, tap ＋ (bottom right) and choose a type, such as Login or Credit Card.</li><li>Fill in the boxes and tap Save.</li><li>To add more, open the item → Edit → Add field: pick the type first, then type the value.</li><li>Use ↑ ↓ to change the order of the fields.</li></ol>
+<p class="tip">Grey text in an empty box is only an example. Empty fields don’t show on the item.</p>
+</article>
+<article class="howto" id="twofa" data-k="2fa two factor 2-step verification authenticator totp qr code otp">
+<h3><a href="#twofa">Add a 2FA code</a></h3>
+<!-- screenshot: /assets/howto/twofa.png -->
+<ol><li>On the website, start setting up 2-step verification until it shows a QR code.</li><li>In the vault, open that site’s login → Edit → Add field → 2FA code.</li><li>Tap 📷 and scan the QR code (or paste the setup key), then Save.</li><li>Type the 6-digit code the item now shows into the website to finish.</li></ol>
+<p class="tip">All codes are on the 2FA codes tab. Tap a code to copy it. Codes also fill the code box automatically.</p>
+</article>
+<article class="howto" id="authimport" data-k="google authenticator import export transfer codes move authenticator app">
+<h3><a href="#authimport">Move 2FA codes from Google Authenticator</a></h3>
+<!-- screenshot: /assets/howto/authimport.png -->
+<ol><li>In Google Authenticator: open the menu → Transfer accounts → Export accounts, and choose the accounts.</li><li>In Affluenter Vault: More → Import 2FA codes.</li><li>Scan the QR code(s) Google Authenticator shows.</li><li>Check the codes on the 2FA codes tab before deleting anything from the other app.</li></ol>
+<p class="tip">Microsoft Authenticator can’t export its codes, so add those again from each site.</p>
+</article>
+<article class="howto" id="move" data-k="import csv google password manager chrome samsung pass bitwarden lastpass 1password keepass firefox move switch">
+<h3><a href="#move">Import passwords from Google, Samsung or another app</a></h3>
+<!-- screenshot: /assets/howto/move.png -->
+<ol><li>Export your passwords from the other app (Google: Chrome → Settings → Password Manager → ⚙ Settings → Export passwords).</li><li>In Affluenter Vault: More → Import and pick the file.</li><li>When it’s done, delete the exported file — it isn’t encrypted.</li><li>Then open the Security tab to merge any duplicates.</li></ol>
+<p class="tip">On Android 14 and later, some managers can move logins and passkeys straight across with no file.</p>
+</article>
+<article class="howto" id="backup" data-k="backup save avault drive copy export protect">
+<h3><a href="#backup">Back up your vault</a></h3>
+<!-- screenshot: /assets/howto/backup.png -->
+<ol><li>More → Settings → Backup, sync &amp; import → Save an encrypted backup now.</li><li>Save it somewhere off the phone, such as Google Drive.</li><li>Optional: turn on Daily copies to keep one copy per day for 7 days.</li></ol>
+<p class="tip">Backups stay encrypted with the master password you had when you made them. Never uninstall the app to fix a problem.</p>
+</article>
+<article class="howto" id="undo" data-k="undo restore wrong backup mistake revert safety copy">
+<h3><a href="#undo">Undo a restore or import</a></h3>
+<!-- screenshot: /assets/howto/undo.png -->
+<ol><li>More → Settings → Backup, sync &amp; import.</li><li>Tap Undo last restore.</li><li>Your vault goes back to how it was before the last restore or import.</li></ol>
+<p class="tip">To add a backup’s missing items without replacing your vault, use Merge a backup instead of Restore.</p>
+</article>
+<article class="howto" id="newphone" data-k="new phone switch device transfer upgrade restore">
+<h3><a href="#newphone">Move to a new phone</a></h3>
+<!-- screenshot: /assets/howto/newphone.png -->
+<ol><li>On the old phone, save an encrypted backup to Google Drive (see “Back up your vault”).</li><li>On the new phone, install Affluenter Vault and tap “Restore from an Affluenter Vault backup”.</li><li>Pick the backup and enter the master password it was made with.</li><li>Turn on fingerprint unlock and autofill again.</li></ol>
+<p class="tip">Pro users can also sync both phones through Google Drive.</p>
+</article>
+<article class="howto" id="unlock" data-k="fingerprint biometric pin unlock face lock auto-lock">
+<h3><a href="#unlock">Unlock with fingerprint or PIN</a></h3>
+<!-- screenshot: /assets/howto/unlock.png -->
+<ol><li>More → Settings → Security.</li><li>Turn on fingerprint unlock, or tap Unlock with PIN and choose 6–8 digits.</li><li>Choose how soon the vault locks itself (Auto-lock).</li></ol>
+<p class="tip">You still need your master password for backups and on a new phone, so don’t forget it.</p>
+</article>
+<article class="howto" id="tuneup" data-k="security weak reused old breached change password fix tune-up clean up">
+<h3><a href="#tuneup">Fix weak, reused and old passwords</a></h3>
+<!-- screenshot: /assets/howto/tuneup.png -->
+<ol><li>Open the Security tab.</li><li>Work through the steps from the top; each one shows what it will change.</li><li>For a weak or breached password, tap Fix: the app makes a new one and opens the site’s change-password page.</li><li>Change it on the site, then tap Done (or Didn’t work).</li></ol>
+<p class="tip">Nothing changes until you tap a button, and most steps have Undo.</p>
+</article>
+<article class="howto" id="dupes" data-k="duplicates copies merge combine same login twice">
+<h3><a href="#dupes">Merge duplicate logins</a></h3>
+<!-- screenshot: /assets/howto/dupes.png -->
+<ol><li>Open the Security tab (step 1) or More → Find duplicates.</li><li>Open a set and choose which copy to keep.</li><li>Tap Merge: other passwords go into Previous values, the copies go to Recently deleted.</li></ol>
+<p class="tip">Undo puts everything back.</p>
+</article>
+<article class="howto" id="cards" data-k="card credit debit scan camera checkout payment fill address">
+<h3><a href="#cards">Scan a card and fill it at checkout (Pro)</a></h3>
+<!-- screenshot: /assets/howto/cards.png -->
+<ol><li>Tap ＋ → Credit Card, then 📷 to scan the front (and back) of the card.</li><li>Check the details and Save.</li><li>At checkout, tap the card number box and pick the card; confirm with your fingerprint.</li></ol>
+<p class="tip">Suggestions never show the full number — only •••• 1234.</p>
+</article>
+<article class="howto" id="files" data-k="files scan document id passport photo pdf secure files">
+<h3><a href="#files">Keep IDs and documents in Secure Files</a></h3>
+<!-- screenshot: /assets/howto/files.png -->
+<ol><li>Tap the 📁 Files chip on the Vault tab (or More → Secure Files).</li><li>Tap Scan a document, Take a photo or Choose files.</li><li>Pick a folder. Hold a folder to rename or delete it.</li></ol>
+<p class="tip">Files are encrypted and never added to your gallery. Free: up to 10 files; Pro: unlimited.</p>
+</article>
+<article class="howto" id="look" data-k="dark mode light theme appearance colors">
+<h3><a href="#look">Switch to dark or light mode</a></h3>
+<!-- screenshot: /assets/howto/look.png -->
+<ol><li>More → Settings → Appearance.</li><li>Choose System default, Light or Dark.</li></ol>
+<p class="tip">It changes right away on every screen.</p>
+</article>
+<article class="howto" id="forgot" data-k="forgot master password reset recover locked out">
+<h3><a href="#forgot">Forgot your master password</a></h3>
+<!-- screenshot: /assets/howto/forgot.png -->
+<ol><li>If fingerprint or PIN unlock still works, open the vault that way and save a fresh backup or emergency backup.</li><li>Nobody — including Affluenter — can reset the master password.</li><li>Plan ahead: More → Settings → Emergency access makes a printable Emergency Kit.</li></ol>
+<p class="tip">This is what keeps your vault safe if the phone is lost.</p>
+</article>
+
+<p class="tip">The same answers are in the app: More &rarr; Help &amp; tips. Still stuck? <a href="/support/">Support</a>.</p>
+</div></div>
+<script>
+(function(){var q=document.getElementById('q'),a=[].slice.call(document.querySelectorAll('.howto')),n=document.getElementById('none');
+function f(){var w=q.value.toLowerCase().trim().split(/\s+/).filter(Boolean),c=0;
+a.forEach(function(e){var t=(e.textContent+' '+e.getAttribute('data-k')).toLowerCase(),ok=w.every(function(x){return t.indexOf(x)>=0});e.style.display=ok?'':'none';if(ok)c++});
+n.style.display=c?'none':'block'}
+q.addEventListener('input',f);var p=new URLSearchParams(location.search).get('q');if(p){q.value=p;f()}})();
+</script>
+</main>
+<footer><div class="wrap">
+<div>&copy; Affluenter LLC, Chicago, Illinois &middot; <a href="mailto:info@affluenter.com">info@affluenter.com</a><br>AFFLUENTER is a registered trademark of Affluenter LLC.</div>
+<nav><a href="/">Affluenter Vault</a><a href="/support/">Support</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of use</a><a href="/powerbanks/">AFFLUENTER&reg; power banks</a></nav>
+</div></footer>
+</body>
+</html>
