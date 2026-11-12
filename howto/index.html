@@ -83,7 +83,7 @@ footer a:hover{color:var(--gold)}
 .howto h3 a{color:var(--gold);text-decoration:none}
 .howto:target{border-color:var(--gold)}
 .howto ol{padding-left:22px;margin:6px 0}
-.howto img{width:100%;max-width:320px;border-radius:12px;border:1px solid var(--line);display:block;margin:10px 0}
+.howto img{width:100%;max-width:320px;height:auto;border-radius:12px;border:1px solid var(--line);display:block;margin:10px 0}
 .tip{color:var(--muted);font-size:15px;margin:8px 0 0}
 #none{display:none;color:var(--muted)}
 </style>
@@ -101,7 +101,7 @@ footer a:hover{color:var(--gold)}
 <p id="none">Nothing matches. Try another word, see <a href="/support/">Support</a> or email <a href="mailto:info@affluenter.com">info@affluenter.com</a>.</p>
 <article class="howto" id="basics" data-k="copy clipboard long press hold quick username code favorite">
 <h3><a href="#basics">Copy a password without opening the item</a></h3>
-<!-- screenshot: /assets/howto/basics.png -->
+<img src="/assets/howto/basics.png" alt="The Vault tab with example items (example data)" width="540" height="1200" loading="lazy">
 <ol><li>On the Vault tab, find the item (search or scroll).</li><li>Press and hold the item.</li><li>Tap Copy username, Copy Password or Copy 2FA code, then paste it where you need it.</li></ol>
 <p class="tip">Passwords and codes are cleared from the clipboard after 30 seconds (you can change this in Settings).</p>
 </article>
@@ -125,31 +125,31 @@ footer a:hover{color:var(--gold)}
 </article>
 <article class="howto" id="strong" data-k="generate new password sign up register strong random create account">
 <h3><a href="#strong">Create a strong password when signing up</a></h3>
-<!-- screenshot: /assets/howto/strong.png -->
+<img src="/assets/howto/strong.png" alt="The password generator (example data)" width="540" height="1200" loading="lazy">
 <ol><li>On the sign-up form, tap the password box.</li><li>Tap “🔑 Create a strong password” in the suggestions.</li><li>The password is saved in the vault first, then filled in. Finish signing up.</li></ol>
 <p class="tip">On a change-password form, the new password waits until you confirm the site accepted it.</p>
 </article>
 <article class="howto" id="add" data-k="add item new entry field custom note card login">
 <h3><a href="#add">Add an item or a field</a></h3>
-<!-- screenshot: /assets/howto/add.png -->
+<img src="/assets/howto/add.png" alt="Adding a new login (example data)" width="540" height="1200" loading="lazy">
 <ol><li>On the Vault tab, tap ＋ (bottom right) and choose a type, such as Login or Credit Card.</li><li>Fill in the boxes and tap Save.</li><li>To add more, open the item → Edit → Add field: pick the type first, then type the value.</li><li>Use ↑ ↓ to change the order of the fields.</li></ol>
 <p class="tip">Grey text in an empty box is only an example. Empty fields don’t show on the item.</p>
 </article>
 <article class="howto" id="twofa" data-k="2fa two factor 2-step verification authenticator totp qr code otp">
 <h3><a href="#twofa">Add a 2FA code</a></h3>
-<!-- screenshot: /assets/howto/twofa.png -->
+<img src="/assets/howto/twofa.png" alt="A login with its 2FA code (example data)" width="540" height="1200" loading="lazy">
 <ol><li>On the website, start setting up 2-step verification until it shows a QR code.</li><li>In the vault, open that site’s login → Edit → Add field → 2FA code.</li><li>Tap 📷 and scan the QR code (or paste the setup key), then Save.</li><li>Type the 6-digit code the item now shows into the website to finish.</li></ol>
 <p class="tip">All codes are on the 2FA codes tab. Tap a code to copy it. Codes also fill the code box automatically.</p>
 </article>
 <article class="howto" id="authimport" data-k="google authenticator import export transfer codes move authenticator app">
 <h3><a href="#authimport">Move 2FA codes from Google Authenticator</a></h3>
-<!-- screenshot: /assets/howto/authimport.png -->
+<img src="/assets/howto/authimport.png" alt="The 2FA codes tab (example data)" width="540" height="1200" loading="lazy">
 <ol><li>In Google Authenticator: open the menu → Transfer accounts → Export accounts, and choose the accounts.</li><li>In Affluenter Vault: More → Import 2FA codes.</li><li>Scan the QR code(s) Google Authenticator shows.</li><li>Check the codes on the 2FA codes tab before deleting anything from the other app.</li></ol>
 <p class="tip">Microsoft Authenticator can’t export its codes, so add those again from each site.</p>
 </article>
 <article class="howto" id="move" data-k="import csv google password manager chrome samsung pass bitwarden lastpass 1password keepass firefox move switch">
 <h3><a href="#move">Import passwords from Google, Samsung or another app</a></h3>
-<!-- screenshot: /assets/howto/move.png -->
+<img src="/assets/howto/move.png" alt="The Import screen (example data)" width="540" height="1200" loading="lazy">
 <ol><li>Export your passwords from the other app (Google: Chrome → Settings → Password Manager → ⚙ Settings → Export passwords).</li><li>In Affluenter Vault: More → Import and pick the file.</li><li>When it’s done, delete the exported file — it isn’t encrypted.</li><li>Then open the Security tab to merge any duplicates.</li></ol>
 <p class="tip">On Android 14 and later, some managers can move logins and passkeys straight across with no file.</p>
 </article>
@@ -167,49 +167,49 @@ footer a:hover{color:var(--gold)}
 </article>
 <article class="howto" id="newphone" data-k="new phone switch device transfer upgrade restore">
 <h3><a href="#newphone">Move to a new phone</a></h3>
-<!-- screenshot: /assets/howto/newphone.png -->
+<img src="/assets/howto/newphone.png" alt="First start, with Restore from a backup (example data)" width="540" height="1200" loading="lazy">
 <ol><li>On the old phone, save an encrypted backup to Google Drive (see “Back up your vault”).</li><li>On the new phone, install Affluenter Vault and tap “Restore from an Affluenter Vault backup”.</li><li>Pick the backup and enter the master password it was made with.</li><li>Turn on fingerprint unlock and autofill again.</li></ol>
 <p class="tip">Pro users can also sync both phones through Google Drive.</p>
 </article>
 <article class="howto" id="unlock" data-k="fingerprint biometric pin unlock face lock auto-lock">
 <h3><a href="#unlock">Unlock with fingerprint or PIN</a></h3>
-<!-- screenshot: /assets/howto/unlock.png -->
+<img src="/assets/howto/unlock.png" alt="The lock screen (example data)" width="540" height="1200" loading="lazy">
 <ol><li>More → Settings → Security.</li><li>Turn on fingerprint unlock, or tap Unlock with PIN and choose 6–8 digits.</li><li>Choose how soon the vault locks itself (Auto-lock).</li></ol>
 <p class="tip">You still need your master password for backups and on a new phone, so don’t forget it.</p>
 </article>
 <article class="howto" id="tuneup" data-k="security weak reused old breached change password fix tune-up clean up">
 <h3><a href="#tuneup">Fix weak, reused and old passwords</a></h3>
-<!-- screenshot: /assets/howto/tuneup.png -->
+<img src="/assets/howto/tuneup.png" alt="The Security tab's step-by-step list (example data)" width="540" height="1200" loading="lazy">
 <ol><li>Open the Security tab.</li><li>Work through the steps from the top; each one shows what it will change.</li><li>For a weak or breached password, tap Fix: the app makes a new one and opens the site’s change-password page.</li><li>Change it on the site, then tap Done (or Didn’t work).</li></ol>
 <p class="tip">Nothing changes until you tap a button, and most steps have Undo.</p>
 </article>
 <article class="howto" id="dupes" data-k="duplicates copies merge combine same login twice">
 <h3><a href="#dupes">Merge duplicate logins</a></h3>
-<!-- screenshot: /assets/howto/dupes.png -->
+<img src="/assets/howto/dupes.png" alt="The Duplicates screen (example data)" width="540" height="1200" loading="lazy">
 <ol><li>Open the Security tab (step 1) or More → Find duplicates.</li><li>Open a set and choose which copy to keep.</li><li>Tap Merge: other passwords go into Previous values, the copies go to Recently deleted.</li></ol>
 <p class="tip">Undo puts everything back.</p>
 </article>
 <article class="howto" id="cards" data-k="card credit debit scan camera checkout payment fill address">
 <h3><a href="#cards">Scan a card and fill it at checkout (Pro)</a></h3>
-<!-- screenshot: /assets/howto/cards.png -->
+<img src="/assets/howto/cards.png" alt="A saved card with the number hidden (example data)" width="540" height="1200" loading="lazy">
 <ol><li>Tap ＋ → Credit Card, then 📷 to scan the front (and back) of the card.</li><li>Check the details and Save.</li><li>At checkout, tap the card number box and pick the card; confirm with your fingerprint.</li></ol>
 <p class="tip">Suggestions never show the full number — only •••• 1234.</p>
 </article>
 <article class="howto" id="files" data-k="files scan document id passport photo pdf secure files">
 <h3><a href="#files">Keep IDs and documents in Secure Files</a></h3>
-<!-- screenshot: /assets/howto/files.png -->
+<img src="/assets/howto/files.png" alt="Secure Files folders (example data)" width="540" height="1200" loading="lazy">
 <ol><li>Tap the 📁 Files chip on the Vault tab (or More → Secure Files).</li><li>Tap Scan a document, Take a photo or Choose files.</li><li>Pick a folder. Hold a folder to rename or delete it.</li></ol>
 <p class="tip">Files are encrypted and never added to your gallery. Free: up to 10 files; Pro: unlimited.</p>
 </article>
 <article class="howto" id="look" data-k="dark mode light theme appearance colors">
 <h3><a href="#look">Switch to dark or light mode</a></h3>
-<!-- screenshot: /assets/howto/look.png -->
+<img src="/assets/howto/look.png" alt="The Vault tab in light mode (example data)" width="540" height="1200" loading="lazy">
 <ol><li>More → Settings → Appearance.</li><li>Choose System default, Light or Dark.</li></ol>
 <p class="tip">It changes right away on every screen.</p>
 </article>
 <article class="howto" id="forgot" data-k="forgot master password reset recover locked out">
 <h3><a href="#forgot">Forgot your master password</a></h3>
-<!-- screenshot: /assets/howto/forgot.png -->
+<img src="/assets/howto/forgot.png" alt="Emergency access (example data)" width="540" height="1200" loading="lazy">
 <ol><li>If fingerprint or PIN unlock still works, open the vault that way and save a fresh backup or emergency backup.</li><li>Nobody — including Affluenter — can reset the master password.</li><li>Plan ahead: More → Settings → Emergency access makes a printable Emergency Kit.</li></ol>
 <p class="tip">This is what keeps your vault safe if the phone is lost.</p>
 </article>
