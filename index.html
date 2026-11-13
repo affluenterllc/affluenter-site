@@ -78,6 +78,34 @@ footer a{color:var(--muted)}
 footer a:hover{color:var(--gold)}
 @media(max-width:640px){.nav{gap:14px;font-size:14px}.nav .opt{display:none}.brand img{height:14px}}
 </style>
+<style>
+/* v2 (same as the HOA pages): higher contrast, clearer CTA, more air, four pillars */
+body{color:#F3F0E8}
+.sub{color:#CFCAbe}
+.hero{padding:120px 0 104px}
+.hero .mark{margin-bottom:34px}
+.hero h1{margin-bottom:20px}
+.hero p.lead{color:#F3F0E8;line-height:1.7;margin-bottom:40px}
+.btn{padding:15px 28px;font-size:17px;transition:transform .15s,box-shadow .15s,background .15s}
+.btn.solid{background:#E6C97A;border-color:#E6C97A;color:#0E0E0E;box-shadow:0 6px 24px rgba(230,201,122,.28)}
+.btn.solid:hover{background:#F1D88F;transform:translateY(-1px);box-shadow:0 10px 30px rgba(230,201,122,.38)}
+.btn.ghost{color:#ECE8DD;border-color:#6b5a2e}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.note{color:#B9B4A8;margin-top:20px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.pillar{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:28px 26px}
+.pillar .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:#231e12;margin-bottom:18px}
+.pillar .ic svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pillar h3{font-size:21px;margin:0 0 10px;color:#fff}
+.pillar p{margin:0 0 14px;color:#DDD8CC;font-size:16px;line-height:1.7}
+.pillar ul{margin:0;padding:0;list-style:none}
+.pillar li{position:relative;padding-left:20px;margin:8px 0;color:#F3F0E8;font-size:15.5px;line-height:1.55}
+.pillar li:before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.points span{color:#D2CDC1;line-height:1.7}
+section{padding:84px 0}
+.cta{text-align:center}
+.cta .btns{margin-top:26px}
+</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -99,19 +127,27 @@ footer a:hover{color:var(--gold)}
 <section id="features"><div class="wrap">
 <h2>Everything in one locked place</h2>
 <p class="sub">Logins, cards, notes, passkeys, 2FA codes and private files, filled in where you need them.</p>
-<div class="grid">
-<div class="card"><h3>Autofill everywhere</h3><p>Fills usernames and passwords in apps and browsers, and in Android's sign-in sheet on Android 14 and later.</p></div>
-<div class="card"><h3>Passkeys</h3><p>Create and use passkeys on Android 14 and later, kept in your encrypted vault and confirmed with your fingerprint or password every time.</p></div>
-<div class="card"><h3>Create a strong password</h3><p>On any sign-up or change-password form, one tap makes a strong password, saves it first and then fills it in, so it's never lost.</p></div>
-<div class="card"><h3>2FA codes built in</h3><p>Keep two-factor codes next to your logins and fill them straight into the code box. Bring codes over from your authenticator app or send them to one. A codes screen and widget too.</p></div>
-<div class="card"><h3>Quick save</h3><p>Tap Save in Android's prompt and the login goes straight into your vault, with Undo if you change your mind.</p></div>
-<div class="card"><h3>Fingerprint and PIN unlock</h3><p>Open the vault in a second. The key stays in your phone's secure hardware.</p></div>
-<div class="card"><h3>Security</h3><p>Finds weak, reused and breached passwords, flags sites that offer 2FA, and merges duplicates. Then it walks you through fixing them, step by step, opening each site's change-password page and keeping the new password waiting until it works.</p></div>
-<div class="card"><h3>Secure Files</h3><p>Scans, photos and documents, each encrypted separately with your vault key.</p></div>
-<div class="card"><h3>Backups and Drive sync</h3><p>Encrypted backups wherever you choose, optional daily copies, a safety copy before every restore with Undo, and sync between phones through your own Google Drive (Pro).</p></div>
-<div class="card"><h3>Easy to switch</h3><p>Bring in logins from Google, Samsung Pass, Bitwarden, LastPass, KeePass, Firefox and 1Password, and 2FA codes from your authenticator app.</p></div>
-<div class="card"><h3>Travel Mode</h3><p>Move chosen items and files off the phone before a trip and bring them back later (Pro).</p></div>
-<div class="card"><h3>Emergency Kit</h3><p>A printable kit and an emergency backup so a trusted person can reach your vault if they ever need to.</p></div>
+<div class="pillars">
+<div class="pillar"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2L20 3M16 7l3 3M18.5 4.5l2 2"/></svg></div>
+<h3>Signs you in</h3>
+<p>Logins, passkeys and 2FA codes, filled in where you sign in.</p>
+<ul><li>Autofill in apps, browsers and Android's sign-in sheet</li><li>Passkeys on Android 14 and later</li><li>2FA codes fill straight into the code box</li><li>Quick save from Android's prompt, with Undo</li></ul>
+</div>
+<div class="pillar"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></svg></div>
+<h3>Fixes weak passwords</h3>
+<p>Security finds what needs work, then walks you through it.</p>
+<ul><li>A strong password on any sign-up form, saved before it fills</li><li>Weak, reused and breached passwords found</li><li>Step-by-step changes on each site's change-password page</li><li>Duplicate logins merged</li></ul>
+</div>
+<div class="pillar"><div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v2.5"/></svg></div>
+<h3>Locks away more</h3>
+<p>Cards, notes and private files, encrypted with your vault key.</p>
+<ul><li>Fingerprint or PIN unlock in a second</li><li>Secure Files for scans, photos and documents</li><li>Travel Mode moves chosen items off the phone (Pro)</li><li>Emergency Kit for a trusted person</li></ul>
+</div>
+<div class="pillar"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14.3 4.9M4 12a8 8 0 0 1 14.3-4.9"/><path d="M18.5 3v4.2h-4.2M5.5 21v-4.2h4.2"/></svg></div>
+<h3>Easy to move</h3>
+<p>Bring your passwords in, and never lose them.</p>
+<ul><li>Import from Google, Samsung Pass, Bitwarden, 1Password and more</li><li>Encrypted backups, daily copies and Undo on restore</li><li>Sync between phones through your own Google Drive (Pro)</li></ul>
+</div>
 </div>
 </div></section>
 
@@ -145,6 +181,12 @@ footer a:hover{color:var(--gold)}
 <tr><td>Travel Mode and emergency backup</td><td class="c no">&mdash;</td><td class="c yes">&#10003;</td></tr>
 </tbody>
 </table>
+</div></section>
+
+<section id="contact" class="cta"><div class="wrap narrow">
+<h2>Questions?</h2>
+<p class="sub" style="margin:0 auto">See how it works step by step, or email us.</p>
+<div class="btns"><a class="btn solid" href="/guide/">Read the guide</a><a class="btn ghost" href="mailto:info@affluenter.com">info@affluenter.com</a></div>
 </div></section>
 
 </main>
