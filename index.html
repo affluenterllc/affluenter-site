@@ -106,6 +106,15 @@ section{padding:84px 0}
 .cta{text-align:center}
 .cta .btns{margin-top:26px}
 </style>
+<style>
+/* Vault home: pillars 2x2 on wide screens, larger icons */
+.pillars{grid-template-columns:1fr;gap:22px}
+@media(min-width:720px){.pillars{grid-template-columns:repeat(2,1fr)}}
+.pillar{padding:32px 30px}
+.pillar .ic{width:56px;height:56px;border-radius:14px;background:#2a2314;border:1px solid #3d3320}
+.pillar .ic svg{width:30px;height:30px}
+.pillar p,.pillar li,.sub{text-wrap:pretty}
+</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -134,7 +143,7 @@ section{padding:84px 0}
 <ul><li>Autofill in apps, browsers and Android's sign-in sheet</li><li>Passkeys on Android 14 and later</li><li>2FA codes fill straight into the code box</li><li>Quick save from Android's prompt, with Undo</li></ul>
 </div>
 <div class="pillar"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></svg></div>
-<h3>Fixes weak passwords</h3>
+<h3>Fixes passwords</h3>
 <p>Security finds what needs work, then walks you through it.</p>
 <ul><li>A strong password on any sign-up form, saved before it fills</li><li>Weak, reused and breached passwords found</li><li>Step-by-step changes on each site's change-password page</li><li>Duplicate logins merged</li></ul>
 </div>
