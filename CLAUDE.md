@@ -1,3 +1,3 @@
-This repo is the generated static site for affluenter.com (GitHub Pages). Don't hand-edit the pages. The README says where
-they come from. The generator it names (`website/make_site.py` in `affluenter-vault`) is not on that repo's `main` branch, so
-confirm where it lives before regenerating anything.
+This repo is the static site for affluenter.com (GitHub Pages). The Vault pages are edited directly; there is no generator
+for them. The `/hoa/` pages come from `website/make_hoa_pages.py` in `affluenter-hoa`: regenerate them there and copy the
+output in, don't hand-edit them.
