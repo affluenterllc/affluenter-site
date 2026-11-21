@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How your vault is protected — Affluenter Vault</title>
+<meta name="description" content="How Affluenter Vault encrypts your data, what leaves your phone, what happens if you lose your phone or forget your master password, and what we cannot promise.">
+<link rel="canonical" href="https://affluenter.com/security/">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How your vault is protected — Affluenter Vault">
+<meta property="og:description" content="How Affluenter Vault encrypts your data, what leaves your phone, what happens if you lose your phone or forget your master password, and what we cannot promise.">
+<meta property="og:url" content="https://affluenter.com/security/">
+<meta property="og:image" content="https://affluenter.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/pagella-bold.otf" as="font" type="font/otf" crossorigin>
+<style>
+@font-face{font-family:"Pagella";src:url("/assets/pagella-bold.otf") format("opentype");font-weight:700;font-display:swap}
+:root{--gold:#D4BA71;--gold-d:#B8973F;--ink:#0E0E0E;--ink2:#171717;--line:#2a2a2a;--text:#ECE8DD;--muted:#A7A296;--paper:#F6F4EE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--ink)}
+a{color:var(--gold)}
+h1,h2,h3{font-family:"Pagella","TeX Gyre Pagella","Palatino Linotype",Palatino,Georgia,serif;font-weight:700;color:#fff;line-height:1.2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:760px}
+/* header */
+.top{position:sticky;top:0;z-index:5;background:rgba(14,14,14,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center}
+.brand img{height:18px;width:auto;display:block}
+.nav{display:flex;gap:20px;font-size:15px}
+.nav a{color:var(--text);text-decoration:none;opacity:.85}
+.nav a:hover,.nav a[aria-current]{color:var(--gold);opacity:1}
+/* hero */
+.hero{padding:72px 0 64px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#2a2414 0%,var(--ink) 62%)}
+.hero .mark{width:112px;height:auto;margin:0 auto 26px;display:block}
+.hero h1{font-size:clamp(36px,6vw,58px);margin:0 0 14px}
+.hero p.lead{font-size:clamp(18px,2.4vw,21px);color:var(--text);max-width:640px;margin:0 auto 30px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid var(--gold)}
+.btn.solid{background:var(--gold);color:var(--ink)}
+.btn.ghost{color:var(--gold)}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,38px);margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 34px;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:20px;margin:0 0 6px;color:var(--gold)}
+.card p{margin:0;color:var(--text);font-size:16px}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.points b{display:block;color:#fff;font-size:18px;margin-bottom:4px}
+.points span{color:var(--muted);font-size:16px}
+table.plans{width:100%;border-collapse:collapse;font-size:16px}
+table.plans th,table.plans td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+table.plans th{color:var(--gold);font-weight:600}
+table.plans td.c{text-align:center;width:90px}
+.yes{color:var(--gold);font-weight:700}
+.no{color:#666}
+/* text pages */
+.page{padding:48px 0 70px}
+.page h1{font-size:clamp(30px,5vw,42px);margin:0 0 6px}
+.page h2{font-size:24px;margin:38px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+.page h3{font-size:19px;margin:24px 0 6px;color:var(--gold)}
+.page .meta{color:var(--muted);margin:0 0 22px}
+.page ul{padding-left:22px}
+.page li{margin:6px 0}
+/* footer */
+footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--gold)}
+@media(max-width:640px){.nav{gap:14px;font-size:14px}.nav .opt{display:none}.brand img{height:14px}}
+@media(max-width:440px){.top .wrap{padding:0 16px;gap:12px}.nav{gap:12px}.brand img{height:12px}}
+@media(max-width:380px){.nav{gap:10px;font-size:13px}.brand img{height:11px}}
+</style>
+<style>
+/* v2 (same as the HOA pages): higher contrast, clearer CTA, more air, four pillars */
+body{color:#F3F0E8}
+.sub{color:#CFCAbe}
+.hero{padding:120px 0 104px}
+.hero .mark{margin-bottom:34px}
+.hero h1{margin-bottom:20px}
+.hero p.lead{color:#F3F0E8;line-height:1.7;margin-bottom:40px}
+.btn{padding:15px 28px;font-size:17px;transition:transform .15s,box-shadow .15s,background .15s}
+.btn.solid{background:#E6C97A;border-color:#E6C97A;color:#0E0E0E;box-shadow:0 6px 24px rgba(230,201,122,.28)}
+.btn.solid:hover{background:#F1D88F;transform:translateY(-1px);box-shadow:0 10px 30px rgba(230,201,122,.38)}
+.btn.ghost{color:#ECE8DD;border-color:#6b5a2e}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.note{color:#B9B4A8;margin-top:20px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.pillar{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:28px 26px}
+.pillar .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:#231e12;margin-bottom:18px}
+.pillar .ic svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pillar h3{font-size:21px;margin:0 0 10px;color:#fff}
+.pillar p{margin:0 0 14px;color:#DDD8CC;font-size:16px;line-height:1.7}
+.pillar ul{margin:0;padding:0;list-style:none}
+.pillar li{position:relative;padding-left:20px;margin:8px 0;color:#F3F0E8;font-size:15.5px;line-height:1.55}
+.pillar li:before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.points span{color:#D2CDC1;line-height:1.7}
+section{padding:84px 0}
+.cta{text-align:center}
+.cta .btns{margin-top:26px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/" aria-label="Affluenter home"><img src="/assets/wordmark-gold.png" alt="AFFLUENTER" width="900" height="96"></a>
+<nav class="nav"><a href="/">Vault</a><a href="/guide/">Guide</a><a href="/support/">Support</a><a href="/security/" aria-current="page">Security</a><a href="/privacy/">Privacy</a><a href="/terms/" class="opt">Terms</a></nav>
+</div></header>
+<main>
+<div class="page"><div class="wrap narrow">
+<h1>How your vault is protected</h1>
+<p class="meta">Affluenter Vault for Android &middot; Updated November 21, 2026</p>
+<p>This page explains in plain language what protects your vault, what leaves your phone, and what happens if something goes wrong. It describes how the app is built today. The <a href="/privacy/">Privacy Policy</a> is the legal document.</p>
+
+<h2>The short version</h2>
+<ul>
+<li>Your vault is encrypted on your phone with AES-256-GCM. Affluenter never receives it. There is no account and no Affluenter server holding your data.</li>
+<li>The key comes from your master password, stretched with Argon2id. We can&rsquo;t see it and we can&rsquo;t reset it.</li>
+<li>The app has no ads, no analytics and no third-party trackers. Optional online features send only the small amounts listed below.</li>
+<li>No outside security firm has reviewed the app yet. See &ldquo;What we can&rsquo;t promise&rdquo;.</li>
+</ul>
+
+<h2>How the vault is locked</h2>
+<p>Your vault is one encrypted file on your phone. Logins, cards, notes, 2FA secrets and passkeys are all inside it.</p>
+<ul>
+<li>A random 256-bit key encrypts the vault with AES-256-GCM, which also notices any change to the file. The file&rsquo;s header is checked as well, so it can&rsquo;t be quietly altered.</li>
+<li>That random key is itself locked with a second key made from your master password using Argon2id, a slow, memory-hard method that makes guessing expensive. On most phones it uses 64 MB of memory, and the number of passes is tuned so unlocking takes about a second on your phone.</li>
+<li>Argon2id is built into the app and is tested against the published test vector of the standard (RFC 9106).</li>
+<li>Secure Files (scans, photos, documents) are encrypted with the same key and AES-256-GCM, in 1 MB pieces.</li>
+<li>Vaults made before version 1.1.31 used an older method (PBKDF2). The app asks for your master password once to upgrade them to Argon2id.</li>
+<li>Your master password is never stored. A long, unique master password is what keeps someone out who has a copy of the file.</li>
+</ul>
+
+<h2>Unlocking without typing the master password</h2>
+<h3>Fingerprint</h3>
+<p>Android&rsquo;s own fingerprint check does the matching. The app never sees your fingerprint.</p>
+<h3>PIN</h3>
+<p>Your PIN is stretched with Argon2id and combined with a second key kept in your phone&rsquo;s secure hardware (Android Keystore, in the dedicated security chip when the phone has one). That hardware key only works while the phone itself is unlocked, so a copy of the app&rsquo;s files is useless on another device. After 5 wrong PINs the PIN is erased and the master password is needed. New PINs need at least 6 digits and can&rsquo;t be an obvious pattern.</p>
+
+<h2>While the app is open</h2>
+<ul>
+<li>It locks after 60 seconds away and when the screen turns off. Both can be changed in Settings.</li>
+<li>Screenshots and the recent-apps preview are blocked by default.</li>
+<li>Copied passwords and codes are marked sensitive and cleared from the clipboard after 30 seconds by default. Some keyboards keep their own clipboard history; you can clear it or turn it off in the keyboard&rsquo;s settings.</li>
+<li>Android&rsquo;s cloud backup includes only the encrypted vault file, never the app&rsquo;s settings or the fingerprint key.</li>
+</ul>
+
+<h2>What leaves your phone</h2>
+<p>Only when you use a feature that needs it. The <a href="/privacy/">Privacy Policy</a> has the full list. In short:</p>
+<ul>
+<li><b>Breach check:</b> the first 5 characters of a password&rsquo;s SHA-1 hash go to Have I Been Pwned, never the password.</li>
+<li><b>2FA site list:</b> the app downloads a public list from 2fa.directory and sends nothing about you or your vault.</li>
+<li><b>Change-password check:</b> asks that one website whether it has a standard change-password page.</li>
+<li><b>Passkey checks:</b> use Google&rsquo;s public lists of trusted apps and browsers.</li>
+<li><b>Email masking (Pro):</b> talks to the service you connected, such as DuckDuckGo, SimpleLogin, addy.io or Firefox Relay.</li>
+<li><b>Drive sync (Pro):</b> saves an encrypted sync file in your own Google Drive.</li>
+<li><b>Buying Pro and update prompts:</b> go through Google Play.</li>
+</ul>
+<p>The app asks Android for these permissions: Internet, fingerprint, notifications, start-up, network status and Google Play billing. It does not ask for camera, contacts, location or storage access. Card and ID scanning uses Google&rsquo;s scanner screens, and the photo is read on your phone.</p>
+
+<h2>If your phone is lost or stolen</h2>
+<ul>
+<li>The vault is encrypted. Someone holding your phone needs your master password, or your fingerprint or PIN on an unlocked phone.</li>
+<li>Use your phone&rsquo;s find-and-erase tool to lock or wipe it.</li>
+<li>On a new phone, restore an encrypted backup or Drive sync (Pro) with your master password. Keep a recent backup somewhere other than the phone.</li>
+<li>If the phone may have been unlocked when it was lost, change the passwords for your most important accounts first.</li>
+</ul>
+
+<h2>If you forget your master password</h2>
+<ul>
+<li>Nobody can reset it, including us, because we never receive it.</li>
+<li>If fingerprint or PIN unlock still works, open the vault that way and make a fresh emergency backup (More &rarr; Settings &rarr; Emergency Access).</li>
+<li>An emergency backup has its own passphrase and can be restored when you set up the app again.</li>
+<li>Plan ahead: Emergency Access makes a printable Emergency Kit where you can write the passphrase down.</li>
+</ul>
+
+<h2>What we can&rsquo;t promise</h2>
+<ul>
+<li><b>No outside audit yet.</b> The encryption methods are standard (AES-GCM, Argon2id), but the app itself has not been reviewed by an independent security firm. If that changes, this page will say so.</li>
+<li><b>The code is not public,</b> so you can&rsquo;t read it yourself.</li>
+<li><b>A weak master password is the weak point.</b> No encryption can protect a short or reused master password from someone who has a copy of your file and unlimited time to guess.</li>
+<li><b>A compromised phone.</b> Malware, or someone watching your screen while the vault is open, can see what you see. Keep Android updated and install apps only from sources you trust.</li>
+<li><b>Android only, from a small company.</b> Affluenter Vault is made by Affluenter LLC in Chicago. It is in open testing on Google Play (US).</li>
+</ul>
+
+<h2>Report a problem</h2>
+<p>Email <a href="mailto:info@affluenter.com">info@affluenter.com</a> with &ldquo;Security&rdquo; in the subject. Please don&rsquo;t send your master password or vault contents; we will never ask for them.</p>
+</div></div>
+
+</main>
+<footer><div class="wrap">
+<div>&copy; Affluenter LLC, Chicago, Illinois &middot; <a href="mailto:info@affluenter.com">info@affluenter.com</a><br>AFFLUENTER is a registered trademark of Affluenter LLC.</div>
+<nav><a href="/">Affluenter Vault</a><a href="/guide/">How to use</a><a href="/howto/">How do I…?</a><a href="/support/">Support</a><a href="/security/">How it&rsquo;s protected</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of use</a><a href="/powerbanks/">AFFLUENTER&reg; power banks</a></nav>
+</div></footer>
+</body>
+</html>
