@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrayShift Open-Source Licenses — Affluenter</title>
+<meta name="description" content="Open-source licenses and notices for the TrayShift Android puzzle game by Affluenter LLC.">
+<link rel="canonical" href="https://affluenter.com/trayshift/licenses/">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" type="image/png" sizes="192x192" href="/trayshift/img/icon-192.png">
+<link rel="apple-touch-icon" href="/trayshift/img/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TrayShift Open-Source Licenses — Affluenter">
+<meta property="og:description" content="Open-source licenses and notices for the TrayShift Android puzzle game by Affluenter LLC.">
+<meta property="og:url" content="https://affluenter.com/trayshift/licenses/">
+<meta property="og:image" content="https://affluenter.com/trayshift/img/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="preload" href="/assets/pagella-bold.otf" as="font" type="font/otf" crossorigin>
+<style>
+@font-face{font-family:"Pagella";src:url("/assets/pagella-bold.otf") format("opentype");font-weight:700;font-display:swap}
+:root{--gold:#D4BA71;--gold-d:#B8973F;--ink:#0E0E0E;--ink2:#171717;--line:#2a2a2a;--text:#ECE8DD;--muted:#A7A296;--paper:#F6F4EE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--ink)}
+a{color:var(--gold)}
+h1,h2,h3{font-family:"Pagella","TeX Gyre Pagella","Palatino Linotype",Palatino,Georgia,serif;font-weight:700;color:#fff;line-height:1.2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:760px}
+/* header */
+.top{position:sticky;top:0;z-index:5;background:rgba(14,14,14,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center}
+.brand img{height:18px;width:auto;display:block}
+.nav{display:flex;gap:20px;font-size:15px}
+.nav a{color:var(--text);text-decoration:none;opacity:.85}
+.nav a:hover,.nav a[aria-current]{color:var(--gold);opacity:1}
+/* hero */
+.hero{padding:72px 0 64px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#2a2414 0%,var(--ink) 62%)}
+.hero .mark{width:112px;height:auto;margin:0 auto 26px;display:block}
+.hero h1{font-size:clamp(36px,6vw,58px);margin:0 0 14px}
+.hero p.lead{font-size:clamp(18px,2.4vw,21px);color:var(--text);max-width:640px;margin:0 auto 30px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid var(--gold)}
+.btn.solid{background:var(--gold);color:var(--ink)}
+.btn.ghost{color:var(--gold)}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,38px);margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 34px;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:20px;margin:0 0 6px;color:var(--gold)}
+.card p{margin:0;color:var(--text);font-size:16px}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.points b{display:block;color:#fff;font-size:18px;margin-bottom:4px}
+.points span{color:var(--muted);font-size:16px}
+table.plans{width:100%;border-collapse:collapse;font-size:16px}
+table.plans th,table.plans td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+table.plans th{color:var(--gold);font-weight:600}
+table.plans td.c{text-align:center;width:90px}
+.yes{color:var(--gold);font-weight:700}
+.no{color:#666}
+/* text pages */
+.page{padding:48px 0 70px}
+.page h1{font-size:clamp(30px,5vw,42px);margin:0 0 6px}
+.page h2{font-size:24px;margin:38px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+.page h3{font-size:19px;margin:24px 0 6px;color:var(--gold)}
+.page .meta{color:var(--muted);margin:0 0 22px}
+.page ul{padding-left:22px}
+.page li{margin:6px 0}
+/* footer */
+footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--gold)}
+@media(max-width:640px){.nav{gap:14px;font-size:14px}.nav .opt{display:none}.brand img{height:14px}}
+@media(max-width:440px){.top .wrap{padding:0 16px;gap:12px}.nav{gap:12px}.brand img{height:12px}}
+@media(max-width:380px){.nav{gap:10px;font-size:13px}.brand img{height:11px}}
+</style>
+<style>
+body{color:#F3F0E8}
+.hero{padding:96px 0 80px;background:radial-gradient(ellipse at 50% 0%,#3a2347 0%,var(--ink) 66%)}
+.appicon{width:140px;height:140px;border-radius:32px;margin:0 auto 28px;display:block;box-shadow:0 14px 40px rgba(255,94,156,.35)}
+.hero h1{font-size:clamp(40px,7vw,64px);margin:0 0 16px}
+.hero p.lead{color:#F3F0E8;line-height:1.7;max-width:620px;margin:0 auto 32px}
+.btn{padding:15px 28px;font-size:17px}
+.btn.solid{background:#FFB347;border-color:#FFB347;color:#0E0E0E}
+.btn.off{border-color:#6b5a2e;color:#CFCAbe;cursor:default}
+.btn.ghost{color:#ECE8DD;border-color:#6b5a2e}
+section{padding:72px 0}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:0;list-style:none}
+.steps li{counter-increment:s;background:var(--ink2);border:1px solid var(--line);border-radius:16px;padding:22px;margin:0}
+.steps li:before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#FFB347;color:#0E0E0E;font-weight:700;margin-bottom:12px}
+.shots{display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;justify-content:center;flex-wrap:wrap}
+.shots img{width:230px;max-width:46%;height:auto;border-radius:18px;border:1px solid var(--line)}
+.pillar{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:24px}
+.pillar h3{font-size:20px;margin:0 0 8px;color:#FFB347}
+.pillar p{margin:0;color:#DDD8CC;font-size:16px;line-height:1.65}
+.faq h3{margin:26px 0 6px;color:#FFB347;font-size:19px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/" aria-label="Affluenter home"><img src="/assets/wordmark-gold.png" alt="AFFLUENTER" width="900" height="96"></a>
+<nav class="nav"><a href="/">Vault</a><a href="/trayshift/">TrayShift</a><a href="/trayshift/support/">Support</a><a href="/trayshift/privacy/">Privacy</a><a href="/trayshift/terms/" class="opt">Terms</a><a href="/trayshift/licenses/" aria-current="page" class="opt">Licenses</a></nav>
+</div></header>
+<main>
+<div class="page"><div class="wrap narrow">
+<h1>TrayShift — Open-Source Licenses</h1>
+<p class="meta">Applies to TrayShift version 0.5.0 and later &middot; The same notice is inside the app (Home &rarr; Open-Source Licenses) and works offline</p>
+<h2>Notice</h2>
+<p>TrayShift is &copy; 2026 Affluenter&trade; LLC.</p>
+<p>It is built with open-source software, used under the Apache License, Version 2.0 (full text below):</p>
+<ul>
+<li>AndroidX: Activity, Core and Jetpack Compose (UI, Foundation, Material 3), and the AndroidX libraries they use, &copy; The Android Open Source Project</li>
+<li>Kotlin and kotlinx.coroutines, &copy; JetBrains s.r.o. and contributors</li>
+</ul>
+<p>The sounds, art, backgrounds, animations and icon are made by Affluenter LLC. No third-party images, fonts or audio are included in the app.</p>
+<p>All other names and trademarks belong to their owners.</p>
+<h2>Apache License, Version 2.0</h2>
+<pre style="white-space:pre-wrap;font-size:13px;line-height:1.5;color:#DDD8CC;background:#171717;border:1px solid #2a2a2a;border-radius:12px;padding:18px;overflow-x:auto">
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      &quot;License&quot; shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      &quot;Licensor&quot; shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      &quot;Legal Entity&quot; shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      &quot;control&quot; means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      &quot;You&quot; (or &quot;Your&quot;) shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      &quot;Source&quot; form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      &quot;Object&quot; form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      &quot;Work&quot; shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      &quot;Derivative Works&quot; shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      &quot;Contribution&quot; shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, &quot;submitted&quot;
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as &quot;Not a Contribution.&quot;
+
+      &quot;Contributor&quot; shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a &quot;NOTICE&quot; text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an &quot;AS IS&quot; BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets &quot;[]&quot;
+      replaced with your own identifying information. (Don&#x27;t include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same &quot;printed page&quot; as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</pre>
+<h2>Contact</h2>
+<p>Questions: <a href="mailto:info@affluenter.com">info@affluenter.com</a>.</p>
+</div></div>
+</main>
+<footer><div class="wrap">
+<div>&copy; Affluenter LLC, Chicago, Illinois &middot; <a href="mailto:info@affluenter.com">info@affluenter.com</a><br>AFFLUENTER is a registered trademark of Affluenter LLC.</div>
+<nav><a href="/">Affluenter Vault</a><a href="/guide/">How to use</a><a href="/howto/">How do I…?</a><a href="/support/">Support</a><a href="/security/">How it&rsquo;s protected</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of use</a><a href="/trayshift/">TrayShift</a><a href="/powerbanks/">AFFLUENTER&reg; power banks</a></nav>
+</div></footer>
+</body>
+</html>
