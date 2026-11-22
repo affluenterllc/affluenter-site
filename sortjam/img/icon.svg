@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB347"/><stop offset=".5" stop-color="#FF5E9C"/><stop offset="1" stop-color="#6C4CFF"/></linearGradient>
+<linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF7B93"/><stop offset="1" stop-color="#E8284B"/></linearGradient>
+<linearGradient id="y" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE57A"/><stop offset="1" stop-color="#F5B800"/></linearGradient>
+<linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7CC4FF"/><stop offset="1" stop-color="#1E7BE0"/></linearGradient>
+<g id="tile"><rect x="-80" y="-66" width="160" height="160" rx="38" fill="#000" opacity=".28"/></g>
+</defs>
+<rect width="512" height="512" fill="url(#bg)"/>
+<circle cx="256" cy="256" r="230" fill="#fff" opacity=".08"/>
+<!-- red tile -->
+<g transform="translate(180 196) rotate(-11)">
+<rect x="-76" y="-60" width="152" height="152" rx="36" fill="#B31232"/>
+<rect x="-76" y="-76" width="152" height="152" rx="36" fill="url(#r)"/>
+<ellipse cx="-6" cy="-52" rx="50" ry="14" fill="#fff" opacity=".35"/>
+<circle cx="0" cy="0" r="30" fill="#fff" opacity=".92"/>
+</g>
+<!-- yellow tile -->
+<g transform="translate(338 214) rotate(9)">
+<rect x="-76" y="-60" width="152" height="152" rx="36" fill="#B98500"/>
+<rect x="-76" y="-76" width="152" height="152" rx="36" fill="url(#y)"/>
+<ellipse cx="-6" cy="-52" rx="50" ry="14" fill="#fff" opacity=".4"/>
+<path d="M0-38 L34 0 L0 38 L-34 0Z" fill="#fff" opacity=".92"/>
+</g>
+<!-- blue tile on top -->
+<g transform="translate(258 338) rotate(-3)">
+<rect x="-76" y="-60" width="152" height="152" rx="36" fill="#0D56A8"/>
+<rect x="-76" y="-76" width="152" height="152" rx="36" fill="url(#b)"/>
+<ellipse cx="-6" cy="-52" rx="50" ry="14" fill="#fff" opacity=".4"/>
+<path d="M0-34 L36 28 L-36 28Z" fill="#fff" opacity=".92"/>
+</g>
+</svg>
