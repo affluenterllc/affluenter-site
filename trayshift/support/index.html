@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrayShift Support — Affluenter</title>
+<meta name="description" content="Help and answers for the TrayShift Android puzzle game.">
+<link rel="canonical" href="https://affluenter.com/trayshift/support/">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" type="image/png" sizes="192x192" href="/trayshift/img/icon-192.png">
+<link rel="apple-touch-icon" href="/trayshift/img/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TrayShift Support — Affluenter">
+<meta property="og:description" content="Help and answers for the TrayShift Android puzzle game.">
+<meta property="og:url" content="https://affluenter.com/trayshift/support/">
+<meta property="og:image" content="https://affluenter.com/trayshift/img/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="preload" href="/assets/pagella-bold.otf" as="font" type="font/otf" crossorigin>
+<style>
+@font-face{font-family:"Pagella";src:url("/assets/pagella-bold.otf") format("opentype");font-weight:700;font-display:swap}
+:root{--gold:#D4BA71;--gold-d:#B8973F;--ink:#0E0E0E;--ink2:#171717;--line:#2a2a2a;--text:#ECE8DD;--muted:#A7A296;--paper:#F6F4EE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--ink)}
+a{color:var(--gold)}
+h1,h2,h3{font-family:"Pagella","TeX Gyre Pagella","Palatino Linotype",Palatino,Georgia,serif;font-weight:700;color:#fff;line-height:1.2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:760px}
+/* header */
+.top{position:sticky;top:0;z-index:5;background:rgba(14,14,14,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center}
+.brand img{height:18px;width:auto;display:block}
+.nav{display:flex;gap:20px;font-size:15px}
+.nav a{color:var(--text);text-decoration:none;opacity:.85}
+.nav a:hover,.nav a[aria-current]{color:var(--gold);opacity:1}
+/* hero */
+.hero{padding:72px 0 64px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#2a2414 0%,var(--ink) 62%)}
+.hero .mark{width:112px;height:auto;margin:0 auto 26px;display:block}
+.hero h1{font-size:clamp(36px,6vw,58px);margin:0 0 14px}
+.hero p.lead{font-size:clamp(18px,2.4vw,21px);color:var(--text);max-width:640px;margin:0 auto 30px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid var(--gold)}
+.btn.solid{background:var(--gold);color:var(--ink)}
+.btn.ghost{color:var(--gold)}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,38px);margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 34px;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:20px;margin:0 0 6px;color:var(--gold)}
+.card p{margin:0;color:var(--text);font-size:16px}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.points b{display:block;color:#fff;font-size:18px;margin-bottom:4px}
+.points span{color:var(--muted);font-size:16px}
+table.plans{width:100%;border-collapse:collapse;font-size:16px}
+table.plans th,table.plans td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+table.plans th{color:var(--gold);font-weight:600}
+table.plans td.c{text-align:center;width:90px}
+.yes{color:var(--gold);font-weight:700}
+.no{color:#666}
+/* text pages */
+.page{padding:48px 0 70px}
+.page h1{font-size:clamp(30px,5vw,42px);margin:0 0 6px}
+.page h2{font-size:24px;margin:38px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+.page h3{font-size:19px;margin:24px 0 6px;color:var(--gold)}
+.page .meta{color:var(--muted);margin:0 0 22px}
+.page ul{padding-left:22px}
+.page li{margin:6px 0}
+/* footer */
+footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--gold)}
+@media(max-width:640px){.nav{gap:14px;font-size:14px}.nav .opt{display:none}.brand img{height:14px}}
+@media(max-width:440px){.top .wrap{padding:0 16px;gap:12px}.nav{gap:12px}.brand img{height:12px}}
+@media(max-width:380px){.nav{gap:10px;font-size:13px}.brand img{height:11px}}
+</style>
+<style>
+body{color:#F3F0E8}
+.hero{padding:96px 0 80px;background:radial-gradient(ellipse at 50% 0%,#3a2347 0%,var(--ink) 66%)}
+.appicon{width:140px;height:140px;border-radius:32px;margin:0 auto 28px;display:block;box-shadow:0 14px 40px rgba(255,94,156,.35)}
+.hero h1{font-size:clamp(40px,7vw,64px);margin:0 0 16px}
+.hero p.lead{color:#F3F0E8;line-height:1.7;max-width:620px;margin:0 auto 32px}
+.btn{padding:15px 28px;font-size:17px}
+.btn.solid{background:#FFB347;border-color:#FFB347;color:#0E0E0E}
+.btn.off{border-color:#6b5a2e;color:#CFCAbe;cursor:default}
+.btn.ghost{color:#ECE8DD;border-color:#6b5a2e}
+section{padding:72px 0}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:0;list-style:none}
+.steps li{counter-increment:s;background:var(--ink2);border:1px solid var(--line);border-radius:16px;padding:22px;margin:0}
+.steps li:before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#FFB347;color:#0E0E0E;font-weight:700;margin-bottom:12px}
+.shots{display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;justify-content:center;flex-wrap:wrap}
+.shots img{width:230px;max-width:46%;height:auto;border-radius:18px;border:1px solid var(--line)}
+.pillar{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:24px}
+.pillar h3{font-size:20px;margin:0 0 8px;color:#FFB347}
+.pillar p{margin:0;color:#DDD8CC;font-size:16px;line-height:1.65}
+.faq h3{margin:26px 0 6px;color:#FFB347;font-size:19px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/" aria-label="Affluenter home"><img src="/assets/wordmark-gold.png" alt="AFFLUENTER" width="900" height="96"></a>
+<nav class="nav"><a href="/">Vault</a><a href="/trayshift/">TrayShift</a><a href="/trayshift/support/" aria-current="page">Support</a><a href="/trayshift/privacy/">Privacy</a><a href="/trayshift/terms/" class="opt">Terms</a><a href="/trayshift/licenses/" class="opt">Licenses</a></nav>
+</div></header>
+<main>
+<div class="page"><div class="wrap narrow faq">
+<h1>TrayShift — Support</h1>
+<p class="meta">Questions, bugs or ideas? Email <a href="mailto:info@affluenter.com">info@affluenter.com</a> and tell us your phone model, your Android version and the level you were on.</p>
+<h2>How to play</h2>
+<h3>How do I win?</h3>
+<p>Tap a piece on top of a stack to send it to the tray. Three pieces of the same color clear. Empty the board to win. The tray holds five pieces; one more and the level is lost. Retry is always free, with no lives and no timers.</p>
+<h3>What is a Shift?</h3>
+<p>Every few taps the whole board slides one step. "Shift in" at the top counts the taps left. At "Shift in 1", dashed rings show which piece is about to slide into each square.</p>
+<h3>What do the badges mean?</h3>
+<ul>
+<li><b>Frozen (snowflake):</b> can't be tapped until a piece leaves a square next to it. If only frozen pieces are left, they all thaw.</li>
+<li><b>Locked (padlock):</b> opens when a trio of the color on its small key dot clears.</li>
+<li><b>Linked (chain):</b> two pieces joined by a dashed line. Both must be on top; tapping one moves both and uses two tray slots.</li>
+</ul>
+<h3>How do hints work?</h3>
+<p>Wait a few seconds and the game nudges a good next tap. After two failed tries on a board, a hint shows on your next try and a Hint button appears under the tray.</p>
+<h3>What's the tips panel?</h3>
+<p>Levels 1 to 15 show a short tip above the board. Tap the small i button beside "Pieces left" to hide the tips, and tap it again to bring them back.</p>
+<h2>Levels and the Daily puzzle</h2>
+<h3>How do levels unlock?</h3>
+<p>One at a time: clearing a level opens the next. A new world opens when you clear the last level of the one before.</p>
+<h3>How do I replay a level?</h3>
+<p>Open Levels and tap any level with a check mark. Replaying the tenth level of a world plays its fanfare and confetti again.</p>
+<h3>How does the Daily puzzle work?</h3>
+<p>There is one puzzle per day, the same for everyone. Your first attempt of the day counts toward your streak, and later tries are practice. The puzzle is made on your phone from the date, so it needs no internet. Boosters can't be used in the Daily.</p>
+<h3>What is "Your Week"?</h3>
+<p>Your own scoreboard on Home: levels cleared this week, records (a clear in fewer taps than your best, without boosters), your daily streak and all-time clears. The week resets every Monday. Nothing leaves your phone.</p>
+<h2>Boosters, coins and gifts</h2>
+<h3>What are boosters?</h3>
+<ul>
+<li><b>Blast:</b> tap Blast, then tap any piece. Every piece of that color pops, buried ones too.</li>
+<li><b>Magnet:</b> pulls in the missing pieces for every color waiting in the tray and clears those trios.</li>
+<li><b>Time Freeze:</b> the next Shift waits 3 extra taps.</li>
+</ul>
+<p>They sit on the shelf under the tray. No level needs one.</p>
+<h3>How do I get boosters?</h3>
+<p>Free gifts: Blast at level 3, Magnet at level 6 and Time Freeze at level 9, each with one free use. Clear the tenth level of a world to choose one of the three. You can also buy them with coins in the Shop.</p>
+<h3>What are coins?</h3>
+<p>Coins are earned by playing: 10 for the first clear of a level (+40 on the last level of a world), 2 for a replay and 15 for winning the Daily puzzle. Spend them on boosters in the Shop (Blast 40, Magnet 50, Time Freeze 30). Coins have no cash value, and nothing is ever charged for losing a level.</p>
+<h3>What's the Mailbox and the Daily Gift?</h3>
+<p>Gifts from the game wait in the Mailbox on Home. Each day you open TrayShift, a Daily Gift arrives: 10, 10, 15, 15, 20 and 20 coins on days 1 to 6, and a gift box on day 7. Missing a day only pauses the calendar; it never starts over. Daily streaks of 3, 7, 14 and 30 days earn extra rewards.</p>
+<h3>What's in a gift box?</h3>
+<p>Pick one of six boxes. The odds are: 60% small coins (20), 25% big coins (75), 12% one booster (Blast, Magnet or Time Freeze) and 3% Premium (two boosters you choose). If your last four picks had no Premium, the next one is Premium. Your prize is set before you pick; the other boxes show other draws from the same odds.</p>
+<h2>Ads</h2>
+<h3>Does TrayShift show ads?</h3>
+<p>Yes, lightly. After level 10 a short ad can appear before a new level, at most once every three levels, never after a loss and never in the Daily puzzle. You can also choose to watch an ad to undo your last tap, or to continue after a loss with one extra tray slot. Those are always optional. Ads come from Google AdMob; see the <a href="/trayshift/privacy/">privacy policy</a>.</p>
+<h3>Where are my ad privacy choices?</h3>
+<p>If you are in a region where consent is required (such as the EEA or the UK), the game asks when it first starts. You can change your choice any time with the Ad privacy choices button on the Privacy screen in the game.</p>
+<h2>Sound, music and your progress</h2>
+<h3>What do the Sound and Music switches do?</h3>
+<p>Sound turns the game's sound effects on or off. Music turns the background music on or off; each world has its own tune. The music stays quiet while another app is playing audio and pauses when you leave the game. Vibration is set in your phone's settings.</p>
+<h3>Where is my progress saved?</h3>
+<p>Only on your phone. Uninstalling the game erases it. If Android's backup is on for your device, your Google account may keep a copy and restore it when you reinstall or move to a new phone.</p>
+<h3>Does it need an internet connection?</h3>
+<p>No. You can play every level and the Daily puzzle offline. Ads, and the optional ad buttons, need a connection.</p>
+<h2>Contact</h2>
+<p>Affluenter® LLC, Chicago, Illinois &middot; <a href="mailto:info@affluenter.com">info@affluenter.com</a> &middot; <a href="/trayshift/privacy/">Privacy policy</a> &middot; <a href="/trayshift/terms/">Terms of use</a> &middot; <a href="/trayshift/licenses/">Open-source licenses</a></p>
+</div></div>
+</main>
+<footer><div class="wrap">
+<div>&copy; Affluenter® LLC, Chicago, Illinois &middot; <a href="mailto:info@affluenter.com">info@affluenter.com</a><br>AFFLUENTER is a registered trademark of Affluenter® LLC.</div>
+<nav><a href="/">Affluenter Vault</a><a href="/guide/">How to use</a><a href="/howto/">How do I…?</a><a href="/support/">Support</a><a href="/security/">How it&rsquo;s protected</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of use</a><a href="/trayshift/">TrayShift</a><a href="/powerbanks/">AFFLUENTER&reg; power banks</a></nav>
+</div></footer>
+</body>
+</html>
